@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Contact details
+{% endblock %}
+
+{% block after_header %}
+  {% include "includes/timeout_modal.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <button class="link-back">Back</button>
+
+      <form class="form" action="check-your-answers" method="POST" novalidate>
+        <div class="form-group" data-required="Please answer this question">
+          <fieldset>
+
+            <legend>
+              <h1 class="heading-large">
+                If {{data['local-council']}} has questions about your application, what's the best way to contact you?
+              </h1>
+            </legend>
+
+            <div class="multiple-choice" data-target="contact-by-email">
+              <input id="example-contact-by-email" type="radio" name="contact-method" value="email" {{ checked('contact-method','email') }}>
+              <label for="example-contact-by-email">Email</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-email" >
+              <label class="form-label" for="contact-email">Email address</label>
+              <input class="form-control form-control-3-4" name="contact-email" type="email" id="contact-email" value="{{ data['contact-email'] }}">
+            </div>
+
+            <div class="multiple-choice" data-target="contact-by-phone">
+              <input id="example-contact-by-phone" type="radio" name="contact-method" value="phone" {{ checked('contact-method','phone') }}>
+              <label for="example-contact-by-phone">Phone</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-phone" >
+              <label class="form-label" for="contact-phone">Phone number</label>
+              <input class="form-control" name="contact-phone" type="tel" id="contact-phone" value="{{ data['contact-phone'] }}">
+            </div>
+
+            <div class="multiple-choice" data-target="contact-by-text">
+              <input id="example-contact-by-text" type="radio" name="contact-method" value="text-message" {{ checked('contact-method','text-message') }}>
+              <label for="example-contact-by-text">Text message</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-text" >
+              <label class="form-label" for="contact-text-message">Mobile phone number</label>
+              <input class="form-control" name="contact-text-message" type="tel" id="contact-text-message" value="{{ data['contact-text-message'] }}">
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

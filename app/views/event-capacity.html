@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Event capacity
+{% endblock %}
+
+{% block after_header %}
+  {% include "includes/timeout_modal.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <button class="link-back">Back</button>
+
+      <form class="form" action="licensable-activities" method="POST" novalidate>
+        <fieldset class="form-group" data-required="Please provide event capacity">
+          <label>
+            <h1 class="heading-large">
+              How many people will attend your event?
+            </h1>
+          </label>
+
+          <span class="form-hint">Including, for example, staff, organisers, stewards and performers</span>
+
+          <div class="form-control-1-4">
+            <input class="form-control" aria-label="Enter number of people" name="event-capacity" type="number" id="event-capacity" pattern="[0-9]*" value="{{ data['event-capacity'] }}">
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
