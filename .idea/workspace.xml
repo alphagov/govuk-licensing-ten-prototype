@@ -2,44 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c41e000-f13f-424d-b0cd-3e8ace87d615" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/location-map.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/application-continue.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/application-search.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/event-capacity.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/event-map.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/premises-area.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/premises-description.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/premises-licence.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/favicon.ico" afterPath="$PROJECT_DIR$/app/assets/images/favicon.ico" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/separator-2x.png" afterPath="$PROJECT_DIR$/app/assets/images/separator-2x.png" />
-      <change beforePath="$PROJECT_DIR$/app/assets/images/separator.png" afterPath="$PROJECT_DIR$/app/assets/images/separator.png" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/auto-store-data.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/auto-store-data.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/bind.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/bind.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/details.polyfill.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/details.polyfill.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery-1.11.3.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery-1.11.3.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/sass/application-ie8.scss" afterPath="$PROJECT_DIR$/app/assets/sass/application-ie8.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/sass/application.scss" afterPath="$PROJECT_DIR$/app/assets/sass/application.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/sass/examples.scss" afterPath="$PROJECT_DIR$/app/assets/sass/examples.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/sass/patterns/_check-your-answers.scss" afterPath="$PROJECT_DIR$/app/assets/sass/patterns/_check-your-answers.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/sass/patterns/_task-list.scss" afterPath="$PROJECT_DIR$/app/assets/sass/patterns/_task-list.scss" />
-      <change beforePath="$PROJECT_DIR$/app/assets/sass/unbranded.scss" afterPath="$PROJECT_DIR$/app/assets/sass/unbranded.scss" />
-      <change beforePath="$PROJECT_DIR$/app/config.js" afterPath="$PROJECT_DIR$/app/config.js" />
-      <change beforePath="$PROJECT_DIR$/app/routes.js" afterPath="$PROJECT_DIR$/app/routes.js" />
-      <change beforePath="$PROJECT_DIR$/app/views/includes/breadcrumb_examples.html" afterPath="$PROJECT_DIR$/app/views/includes/breadcrumb_examples.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/includes/head.html" afterPath="$PROJECT_DIR$/app/views/includes/head.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/includes/phase_banner_alpha.html" afterPath="$PROJECT_DIR$/app/views/includes/phase_banner_alpha.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/includes/phase_banner_beta.html" afterPath="$PROJECT_DIR$/app/views/includes/phase_banner_beta.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/includes/propositional_navigation_alpha.html" afterPath="$PROJECT_DIR$/app/views/includes/propositional_navigation_alpha.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/includes/scripts.html" afterPath="$PROJECT_DIR$/app/views/includes/scripts.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/index.html" afterPath="$PROJECT_DIR$/app/views/index.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/layout.html" afterPath="$PROJECT_DIR$/app/views/layout.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -222,8 +185,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -341,28 +304,29 @@
       <workItem from="1511947843367" duration="9848000" />
       <workItem from="1512039380185" duration="1394000" />
       <workItem from="1512058236054" duration="431000" />
+      <workItem from="1512060515896" duration="314000" />
+      <workItem from="1512060968085" duration="172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56494000" />
+    <option name="totallyTimeSpent" value="56980000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="26" width="1400" height="861" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2342277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3002611" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3002611" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
