@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c41e000-f13f-424d-b0cd-3e8ace87d615" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/agent-details-postcode.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/applicant-details-dob.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/applicant-details-ni.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/applicant-details-pob.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/applicant-details-postcode.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/applicant-type.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/personal-licence.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/previous-events-close.html" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/routes.js" afterPath="$PROJECT_DIR$/app/routes.js" />
-      <change beforePath="$PROJECT_DIR$/app/views/applicant-details.html" afterPath="$PROJECT_DIR$/app/views/applicant-details-name.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/application-continue.html" afterPath="$PROJECT_DIR$/app/views/application-continue.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/associates-previous-events-nearby.html" afterPath="$PROJECT_DIR$/app/views/_associates-previous-events-nearby.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/associates-previous-events.html" afterPath="$PROJECT_DIR$/app/views/_associates-previous-events.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/check-your-answers.html" afterPath="$PROJECT_DIR$/app/views/check-your-answers.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/contact-details.html" afterPath="$PROJECT_DIR$/app/views/contact-details.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/event-capacity.html" afterPath="$PROJECT_DIR$/app/views/event-capacity.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/event-dates.html" afterPath="$PROJECT_DIR$/app/views/event-dates.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/event-description.html" afterPath="$PROJECT_DIR$/app/views/event-description.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/event-location-description.html" afterPath="$PROJECT_DIR$/app/views/event-location-description.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/event-map.html" afterPath="$PROJECT_DIR$/app/views/event-map.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/event-postcode.html" afterPath="$PROJECT_DIR$/app/views/event-postcode.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/includes/timeout_modal.html" afterPath="$PROJECT_DIR$/app/views/includes/timeout_modal.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activities.html" afterPath="$PROJECT_DIR$/app/views/licensable-activities.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-food.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-members.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/premises-area.html" afterPath="$PROJECT_DIR$/app/views/premises-area.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/premises-description.html" afterPath="$PROJECT_DIR$/app/views/premises-description.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/premises-licence.html" afterPath="$PROJECT_DIR$/app/views/premises-licence.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/previous-event-date.html" afterPath="$PROJECT_DIR$/app/views/_previous-event-date.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/previous-event-description.html" afterPath="$PROJECT_DIR$/app/views/_previous-event-description.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/previous-events-nearby.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/views/previous-events.html" afterPath="$PROJECT_DIR$/app/views/previous-events.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/task-list.html" afterPath="$PROJECT_DIR$/app/views/_task-list.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/index.html" afterPath="$PROJECT_DIR$/app/views/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,11 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="event-dates.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="event-dates.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/event-dates.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="268">
               <caret line="35" column="83" lean-forward="false" selection-start-line="35" selection-start-column="83" selection-end-line="35" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="78" column="20" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="78" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -106,7 +80,6 @@
         <option value="$PROJECT_DIR$/app/views/includes/scripts.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/number-input.js" />
-        <option value="$PROJECT_DIR$/app/views/index.html" />
         <option value="$PROJECT_DIR$/app/views/late-ten.html" />
         <option value="$PROJECT_DIR$/app/views/payment-card.html" />
         <option value="$PROJECT_DIR$/app/assets/sass/application.scss" />
@@ -150,6 +123,7 @@
         <option value="$PROJECT_DIR$/app/views/applicant-details-pob.html" />
         <option value="$PROJECT_DIR$/app/views/check-your-answers.html" />
         <option value="$PROJECT_DIR$/app/views/event-dates.html" />
+        <option value="$PROJECT_DIR$/app/views/index.html" />
       </list>
     </option>
   </component>
@@ -253,7 +227,7 @@
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="$PROJECT_DIR$/node_modules/standard" />
     <property name="standardjs.codestyle.accepted" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -297,23 +271,22 @@
       <workItem from="1512039380185" duration="1394000" />
       <workItem from="1512058236054" duration="431000" />
       <workItem from="1512060515896" duration="314000" />
-      <workItem from="1512060968085" duration="26295000" />
+      <workItem from="1512060968085" duration="27455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83103000" />
+    <option name="totallyTimeSpent" value="84263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="16" y="23" width="1400" height="797" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32763532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32763532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2342277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -340,14 +313,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/sass/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="22" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/_event-duration.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
@@ -744,6 +709,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="35" column="83" lean-forward="false" selection-start-line="35" selection-start-column="83" selection-end-line="35" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="78" column="20" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="78" selection-end-column="20" />
           <folding />
         </state>
       </provider>
