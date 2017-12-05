@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Event capacity
+  Applicant place of birth
 {% endblock %}
 
 {% block after_header %}
@@ -16,28 +16,22 @@
 
       <button class="link-back">Back</button>
 
-      <form class="form" action="licensable-activities" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide event capacity">
-          <label>
-            <h1 class="heading-large">
-              What is the maximum capacity of the event?
-            </h1>
-          </label>
+      <h1 class="heading-large">
+        Where {% if data['applicant-type'] == "agent" %}was the applicant{% endif %}{% if data['applicant-type'] == "applicant" %}were you{% endif %} born?
+      </h1>
 
-          <span class="form-hint">Including all guests, staff, organisers, stewards and performers etc</span>
+      <form class="form" action="applicant-details-postcode" method="POST" novalidate>
 
-          <div class="form-control-1-4">
-            <input class="form-control" aria-label="Enter number of people" name="event-capacity" type="number" id="event-capacity" pattern="[0-9]*" value="{{ data['event-capacity'] }}">
-          </div>
-
-        </fieldset>
+        <div class="form-group" data-required="Please provide {% if data['applicant-type'] == 'agent' %}applicant{% endif %}{% if data['applicant-type'] == 'applicant' %}your{% endif %} place of birth">
+          <label class="form-label form-label-bold" for="place-of-birth">Place of birth</label>
+          <input class="form-control" id="place-of-birth" type="text" name="place-of-birth" value="{{ data['place-of-birth'] }}" autocomplete="off">
+        </div>
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
         </div>
 
       </form>
-
     </div>
 
     <div class="column-one-third">

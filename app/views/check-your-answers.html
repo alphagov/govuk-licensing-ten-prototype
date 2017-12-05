@@ -73,7 +73,7 @@ Check your answers
         {% if data['licensable-activities'].indexOf('Members') !== -1 %}
           <div>
             <dt class="cya-question">
-              Serving alcohol to members of a private club
+              Serving alcohol
             </dt>
             <dd class="cya-answer">
               {{ data['members-start-hour'] }}:{{ data['members-start-minute'] }} to {{ data['members-end-hour'] }}:{{ data['members-end-minute'] }}
@@ -86,7 +86,7 @@ Check your answers
         {% if data['licensable-activities'].indexOf('Entertainment') !== -1 %}
           <div>
             <dt class="cya-question">
-              Providing entertainment, such as music, dancing or indoor sporting events
+              Providing entertainment
             </dt>
             <dd class="cya-answer">
               {{ data['entertainment-start-hour'] }}:{{ data['entertainment-start-minute'] }} to {{ data['entertainment-end-hour'] }}:{{ data['entertainment-end-minute'] }}
@@ -99,7 +99,7 @@ Check your answers
         {% if data['licensable-activities'].indexOf('Nudity') !== -1 %}
           <div>
             <dt class="cya-question">
-              Providing entertainment including live display of nudity
+              Providing nude entertainment
             </dt>
             <dd class="cya-answer">
               {{ data['nudity-start-hour'] }}:{{ data['nudity-start-minute'] }} to {{ data['nudity-end-hour'] }}:{{ data['nudity-end-minute'] }}
@@ -112,7 +112,7 @@ Check your answers
         {% if data['licensable-activities'].indexOf('Food') !== -1 %}
           <div>
             <dt class="cya-question">
-              Serving hot food or drink between 11pm and 5am
+              Late night refreshments
             </dt>
             <dd class="cya-answer">
               {{ data['food-start-hour'] }}:{{ data['food-start-minute'] }} to {{ data['food-end-hour'] }}:{{ data['food-end-minute'] }}
@@ -170,7 +170,7 @@ Check your answers
         {% if data['existing-licence-premises-num'] %}
         <div>
           <dt class="cya-question">
-            Premises licence
+            Licence number
           </dt>
           <dd class="cya-answer">
             {{ data['existing-licence-premises-num'] }}
@@ -183,7 +183,7 @@ Check your answers
         {% if data['existing-licence-club-num'] %}
         <div>
           <dt class="cya-question">
-            Club premises certificate
+            Certificate number
           </dt>
           <dd class="cya-answer">
             {{ data['existing-licence-club-num'] }}
@@ -207,7 +207,7 @@ Check your answers
             {{ data['applicant-name'] }}
           </dd>
           <dd class="cya-change">
-            <a href="applicant-details?next=check-your-answers" aria-label="Change full name">Change</a>
+            <a href="applicant-details-name?next=check-your-answers" aria-label="Change full name">Change</a>
           </dd>
         </div>
         <div>
@@ -220,22 +220,99 @@ Check your answers
             {{ data['applicant-dob-year'] }}
           </dd>
           <dd class="cya-change">
-            <a href="applicant-details?next=check-your-answers" aria-label="Change date of birth">Change</a>
+            <a href="applicant-details-dob?next=check-your-answers" aria-label="Change date of birth">Change</a>
           </dd>
         </div>
         <div>
           <dt class="cya-question">
-            Contact method
+            Place of birth
           </dt>
           <dd class="cya-answer">
-            {% if data['contact-method'] == 'email' %}{{ data['contact-email'] }}{% endif %}
-            {% if data['contact-method'] == 'phone' %}{{ data['contact-phone'] }}{% endif %}
-            {% if data['contact-method'] == 'text-message' %}{{ data['contact-text-message'] }}{% endif %}
+            {{ data['place-of-birth'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="applicant-details-pob?next=check-your-answers" aria-label="Change place of birth">Change</a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            National Insurance number
+          </dt>
+          <dd class="cya-answer">
+            {{ data['applicant-ni'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="applicant-details-ni?next=check-your-answers" aria-label="Change National Insurance number">Change</a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Address
+          </dt>
+          <dd class="cya-answer">
+            {{ data['applicant-address'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="applicant-details-postcode?next=check-your-answers" aria-label="Change applicant address">Change</a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="heading-medium">
+        Contact details
+      </h2>
+      <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Preferred method
+          </dt>
+          <dd class="cya-answer">
+            {% if data['contact-method'] == 'email' %}Email{% endif %}
+            {% if data['contact-method'] == 'phone' %}Phone{% endif %}
+            {% if data['contact-method'] == 'post' %}Post{% endif %}
           </dd>
           <dd class="cya-change">
             <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
           </dd>
         </div>
+        {% if data['contact-method'] == 'email' %}
+          <div>
+            <dt class="cya-question">
+              Email
+            </dt>
+            <dd class="cya-answer">
+              {{ data['contact-email'] }}
+            </dd>
+            <dd class="cya-change">
+              <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
+            </dd>
+          </div>
+        {% endif %}
+        {% if data['contact-method'] == 'phone' %}
+          <div>
+            <dt class="cya-question">
+              Phone number
+            </dt>
+            <dd class="cya-answer">
+              {{ data['contact-phone'] }}
+            </dd>
+            <dd class="cya-change">
+              <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
+            </dd>
+          </div>
+        {% endif %}
+          <div>
+            <dt class="cya-question">
+              Address
+            </dt>
+            <dd class="cya-answer">
+              {% if data['agent-address'] == '' %}{{ data['applicant-address'] }}{% endif %}
+              {% if data['agent-address'] %}{{ data['agent-address'] }}{% endif %}
+            </dd>
+            <dd class="cya-change">
+              <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
+            </dd>
+          </div>
       </dl>
 
       <h2 class="heading-medium">
@@ -262,6 +339,15 @@ Check your answers
         <a href="declaration" class="button">Continue</a>
       </div>
     </div>
+
+    <div class="column-one-third">
+      <div class="application-summary">
+        <h2 class="heading-medium">Application number</h2>
+        <span class="heading-large">X2F4-59Q3</span>
+        <p class="font-small">Use this number to return to your application</p>
+      </div>
+    </div>
+
   </div>
 </main>
 

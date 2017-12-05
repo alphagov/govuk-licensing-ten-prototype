@@ -22,7 +22,7 @@
 
             <legend>
               <h1 class="heading-large">
-                If {{data['local-council']}} has questions about your application, what's the best way to contact you?
+                If we have questions about your application, what's the best way to contact you?
               </h1>
             </legend>
 
@@ -44,13 +44,16 @@
               <input class="form-control" name="contact-phone" type="tel" id="contact-phone" value="{{ data['contact-phone'] }}">
             </div>
 
-            <div class="multiple-choice" data-target="contact-by-text">
-              <input id="example-contact-by-text" type="radio" name="contact-method" value="text-message" {{ checked('contact-method','text-message') }}>
-              <label for="example-contact-by-text">Text message</label>
+            <div class="multiple-choice" data-target="contact-by-post">
+              <input id="example-contact-by-post" type="radio" name="contact-method" value="post" {{ checked('contact-method','post') }}>
+              <label for="example-contact-by-post">Post</label>
             </div>
-            <div class="panel panel-border-narrow js-hidden" id="contact-by-text" >
-              <label class="form-label" for="contact-text-message">Mobile phone number</label>
-              <input class="form-control" name="contact-text-message" type="tel" id="contact-text-message" value="{{ data['contact-text-message'] }}">
+            <div class="panel panel-border-narrow js-hidden" id="contact-by-post" >
+              {% if data['agent-address'] %}
+                {{ data['agent-address'] }}
+              {% else %}
+                {{ data['applicant-address'] }}
+              {% endif %}
             </div>
 
           </fieldset>
@@ -63,6 +66,15 @@
       </form>
 
     </div>
+
+    <div class="column-one-third">
+      <div class="application-summary">
+        <h2 class="heading-medium">Application number</h2>
+        <span class="heading-large">X2F4-59Q3</span>
+        <p class="font-small">Use this number to return to your application</p>
+      </div>
+    </div>
+
   </div>
 </main>
 

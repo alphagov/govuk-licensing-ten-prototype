@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Event capacity
+  Applicant name
 {% endblock %}
 
 {% block after_header %}
@@ -16,28 +16,21 @@
 
       <button class="link-back">Back</button>
 
-      <form class="form" action="licensable-activities" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide event capacity">
-          <label>
-            <h1 class="heading-large">
-              What is the maximum capacity of the event?
-            </h1>
-          </label>
+      <h1 class="heading-large">
+        What is {% if data['applicant-type'] == "agent" %}the applicants{% endif %}{% if data['applicant-type'] == "applicant" %}your{% endif %} name?
+      </h1>
 
-          <span class="form-hint">Including all guests, staff, organisers, stewards and performers etc</span>
-
-          <div class="form-control-1-4">
-            <input class="form-control" aria-label="Enter number of people" name="event-capacity" type="number" id="event-capacity" pattern="[0-9]*" value="{{ data['event-capacity'] }}">
-          </div>
-
-        </fieldset>
+      <form class="form" action="applicant-details-dob" method="POST" novalidate>
+        <div class="form-group" data-required="Please provide {% if data['applicant-type'] == 'agent' %}applicant{% endif %}{% if data['applicant-type'] == 'applicant' %}your{% endif %} name">
+          <label class="form-label form-label-bold" for="applicant-name">Full name</label>
+          <input class="form-control" id="applicant-name" type="text" name="applicant-name" value="{{ data['applicant-name'] }}" autocomplete="off">
+        </div>
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
         </div>
 
       </form>
-
     </div>
 
     <div class="column-one-third">

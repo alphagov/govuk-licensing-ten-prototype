@@ -135,7 +135,7 @@ router.get('/licensable-activity-alcohol', function (req, res) {
   if (licensableActivities == 'None') { // use == for checkboxes
         // redirect to the relevant page
     res.redirect('no-licence-needed')
-  } else if (licensableActivities.indexOf('Alcohol') !== -1) { // use == for checkboxes
+  } else if (licensableActivities.indexOf('Alcohol') !== -1) {
         // render the page requested
     res.render('licensable-activity-alcohol')
   } else {
@@ -147,7 +147,7 @@ router.get('/licensable-activity-alcohol', function (req, res) {
 router.get('/licensable-activity-members', function (req, res) {
     // get the answer from the query string
   var licensableActivities = req.session.data['licensable-activities']
-  if (licensableActivities.indexOf('Members') !== -1) { // use == for checkboxes
+  if (licensableActivities.indexOf('Members') !== -1) {
         // render the page requested
     res.render('licensable-activity-members')
   } else {
@@ -159,7 +159,7 @@ router.get('/licensable-activity-members', function (req, res) {
 router.get('/licensable-activity-entertainment', function (req, res) {
     // get the answer from the query string
   var licensableActivities = req.session.data['licensable-activities']
-  if (licensableActivities.indexOf('Entertainment') !== -1) { // use == for checkboxes
+  if (licensableActivities.indexOf('Entertainment') !== -1) {
         // render the page requested
     res.render('licensable-activity-entertainment')
   } else {
@@ -171,7 +171,7 @@ router.get('/licensable-activity-entertainment', function (req, res) {
 router.get('/licensable-activity-nudity', function (req, res) {
     // get the answer from the query string
   var licensableActivities = req.session.data['licensable-activities']
-  if (licensableActivities.indexOf('Nudity') !== -1) { // use == for checkboxes
+  if (licensableActivities.indexOf('Nudity') !== -1) {
         // render the page requested
     res.render('licensable-activity-nudity')
   } else {
@@ -183,12 +183,12 @@ router.get('/licensable-activity-nudity', function (req, res) {
 router.get('/licensable-activity-food', function (req, res) {
     // get the answer from the query string
   var licensableActivities = req.session.data['licensable-activities']
-  if (licensableActivities.indexOf('Food') !== -1) { // use == for checkboxes
+  if (licensableActivities.indexOf('Food') !== -1) {
         // render the page requested
     res.render('licensable-activity-food')
   } else {
         // redirect to the relevant page
-    res.redirect('event-postcode')
+    res.redirect('event-description')
   }
 })
 
@@ -226,6 +226,17 @@ router.get('/event-description', function (req, res) {
   } else {
     res.render('event-description')
   }
+})
+
+router.get('/agent-details-postcode', function (req, res) {
+    // get the answer from the query string
+    var applicant = req.session.data['applicant-type']
+
+    if (applicant == 'applicant') {
+        res.redirect('contact-details')
+    } else {
+        res.render('agent-details-postcode')
+    }
 })
 
 router.get('/timeout', function (req, res) {

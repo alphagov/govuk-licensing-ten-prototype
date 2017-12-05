@@ -28,12 +28,14 @@ When will you be selling alcohol
           </legend>
           <div class="form-date">
             <div class="form-group form-group-hour">
+              <label for="alcohol-start-hour">Hour</label>
               <input class="form-control" id="alcohol-start-hour" name="alcohol-start-hour" aria-label="Hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['alcohol-start-hour'] }}" autocomplete="off">
             </div>
 
             <div class="form-group form-group-separator">:</div>
 
             <div class="form-group form-group-minute">
+              <label for="alcohol-start-minute">Minute</label>
               <input class="form-control" id="alcohol-start-minute" name="alcohol-start-minute" aria-label="Minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['alcohol-start-minute'] }}" autocomplete="off">
             </div>
 
@@ -47,12 +49,14 @@ When will you be selling alcohol
           </legend>
           <div class="form-date">
             <div class="form-group form-group-hour">
+              <label for="alcohol-end-hour">Hour</label>
               <input class="form-control" id="alcohol-end-hour" name="alcohol-end-hour" aria-label="Hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['alcohol-end-hour'] }}" autocomplete="off">
             </div>
 
             <div class="form-group form-group-separator">:</div>
 
             <div class="form-group form-group-minute">
+              <label for="alcohol-end-minute">Minute</label>
               <input class="form-control" id="alcohol-end-minute" name="alcohol-end-minute" aria-label="Minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['alcohol-end-minute'] }}" autocomplete="off">
             </div>
 
@@ -62,10 +66,17 @@ When will you be selling alcohol
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
         </div>
-
       </form>
-
     </div>
+
+    <div class="column-one-third">
+      <div class="application-summary">
+        <h2 class="heading-medium">Application number</h2>
+        <span class="heading-large">X2F4-59Q3</span>
+        <p class="font-small">Use this number to return to your application</p>
+      </div>
+    </div>
+
   </div>
 </main>
 

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Event postcode
+  Agent postcode
 {% endblock %}
 
 {% block after_header %}
@@ -14,21 +14,22 @@
   <div class="grid-row">
     <div class="column-two-thirds">
       <button class="link-back">Back</button>
-      <form class="form" action="premises-licence" method="POST">
+      <form class="form" action="contact-details" method="POST">
         <fieldset id="mock-address-lookup" data-required="Please answer this question">
           <!-- <div class="form-group"> -->
-            <legend><h1 class="heading-large">Where will the event be held?</h1></legend>
+            <legend><h1 class="heading-large">
+              What is the address for correspondence?
+            </h1></legend>
           <!-- </div> -->
           <div id="address-lookup-loader"></div>
           <div class="address-lookup-step1">
             <div class="form-group">
-              <label class="form-label form-label-bold" for="event-postcode">Postcode</label>
-              <input class="form-control form-control-1-4" id="event-postcode" type="text" name="event-postcode" value="{{ data['event-postcode'] }}" autocomplete="off">
+              <label class="form-label form-label-bold" for="agent-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="agent-postcode" type="text" name="agent-postcode" value="{{ data['agent-postcode'] }}" autocomplete="off">
             </div>
             <div class="form-group">
               <button class="js-launch-lookup button">Find address</button>
             </div>
-            <a href="event-map">My location doesn't have a postcode</a>
           </div>
           <div class="address-lookup-step2">
             <div class="form-group">
@@ -36,14 +37,14 @@
                 <label class="form-label form-label-bold" for="change-postcode">Postcode</label>
                 <span id="change-postcode" class="postcode"></span> <a href="#change-postcode" aria-label="change postcode" class="change-postcode">Change</a>
               </div>
-              <label class="form-label form-label-bold" for="event-address">Select an address</label>
-              <select class="form-control" id="event-address" name="event-address">
+              <label class="form-label form-label-bold" for="agent-address">Select an address</label>
+              <select class="form-control" id="agent-address" name="agent-address">
                 <option>5 addresses found</option>
-                <option>162 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
-                <option>162B Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
-                <option>163 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
-                <option>164 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
-                <option>165 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+                <option>262 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+                <option>262B Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+                <option>263 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+                <option>264 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+                <option>265 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
               </select>
             </div>
             <div class="form-group">
