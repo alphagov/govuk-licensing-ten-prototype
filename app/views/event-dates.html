@@ -17,31 +17,37 @@
       <button class="link-back">Back</button>
 
       <h1 class="heading-large">
-         When is the event?
+         When is the event happening?
       </h1>
 
       <form class="form" action="event-capacity" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide event start date">
-          <legend>
-            <span class="form-label-bold">When does the event start?</span>
-            <span class="form-hint">For example, 14/03/2017</span>
-          </legend>
-          <div class="form-control-3-4">
-            <div id="event-start-date"></div>
-          </div>
-        </fieldset>
+        <div class="form-group" data-required="Please provide event start date">
+          <fieldset>
+            <legend>
+              <label class="form-label-bold">When does the event start?</label>
+              <span class="form-hint">For example, 14/03/2017</span>
+            </legend>
+            <div class="form-control-3-4">
+              <div id="event-start-date"></div>
+            </div>
+          </fieldset>
+        </div>
 
-        <fieldset class="form-group" data-required="Please provide event duration">
-          <legend>
-            <span class="form-label-bold">How many days will the event last?</span>
-          </legend>
-          <div class="form-control-1-4">
-            <input class="form-control" aria-label="Enter number of days" name="event-duration" type="number" id="event-duration" pattern="[0-9]*" value="{{ data['event-duration'] }}">
-          </div>
-        </fieldset>
+        <div class="form-group" data-required="Please provide event duration">
+          <fieldset>
+            <legend>
+              <label class="form-label-bold">How many days will the event last?</label>
+            </legend>
+            <div class="form-control-1-4">
+              <input class="form-control" aria-label="Enter number of days" name="event-duration" type="number" id="event-duration" pattern="[0-9]*" value="{{ data['event-duration'] }}">
+            </div>
+          </fieldset>
+        </div>
+
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
+          <!--<a href="check-your-answers">Save and return later</a>-->
         </div>
 
       </form>

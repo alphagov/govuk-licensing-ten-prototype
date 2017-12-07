@@ -17,14 +17,14 @@
       <button class="link-back">Back</button>
 
       <form class="form" action="licensable-activities" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide event capacity">
+        <fieldset class="form-group" data-required="Please tell us how many people are attending">
           <label>
             <h1 class="heading-large">
-              What is the maximum capacity of the event?
+              How many people will attend your event?
             </h1>
           </label>
 
-          <span class="form-hint">Including all guests, staff, organisers, stewards and performers etc</span>
+          <span class="form-hint">Include any staff, organisers, stewards and performers</span>
 
           <div class="form-control-1-4">
             <input class="form-control" aria-label="Enter number of people" name="event-capacity" type="number" id="event-capacity" pattern="[0-9]*" value="{{ data['event-capacity'] }}">

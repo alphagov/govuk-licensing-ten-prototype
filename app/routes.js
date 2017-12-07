@@ -228,6 +228,45 @@ router.get('/event-description', function (req, res) {
   }
 })
 
+router.get('/previous-events-close', function (req, res) {
+    // get the answer from the query string
+    var personalLicence = req.session.data['personal-licence']
+    var previousNotice = req.session.data['previous-notice']
+    var previousNoticeStandard = req.session.data['previous-notice-standard-num']
+    var previousNoticeLate = req.session.data['previous-notice-late-num']
+    var numStandard = previousNotice.indexOf('standard') > -1 ? parseInt(previousNoticeStandard) || 0 : 0
+    var numLate = previousNotice.indexOf('late') > -1 ? parseInt(previousNoticeLate) || 0 : 0
+    if (personalLicence == 'yes') { // use == for checkboxes
+        if (numLate < 11 && numStandard + numLate < 51) {
+            // render the page requested
+            res.render('previous-events-close')
+        } else {
+            // redirect to the relevant page
+            res.redirect('ineligible')
+        }
+    } else {
+        if (numLate < 3 && numStandard + numLate < 6) {
+            // render the page requested
+            res.render('previous-events-close')
+        } else {
+            // redirect to the relevant page
+            res.redirect('ineligible')
+        }
+    }
+})
+
+router.get('/applicant-details-name', function (req, res) {
+    // get the answer from the query string
+    var previousEventsClose = req.session.data['previous-events-close']
+    if (previousEventsClose.indexOf('neither') === -1) { // use == for checkboxes
+        // redirect to the relevant page
+        res.redirect('ineligible')
+    } else {
+        // render the page requested
+        res.render('applicant-details-name')
+    }
+})
+
 router.get('/agent-details-postcode', function (req, res) {
     // get the answer from the query string
     var applicant = req.session.data['applicant-type']

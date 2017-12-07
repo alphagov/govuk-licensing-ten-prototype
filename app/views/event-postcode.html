@@ -17,7 +17,7 @@
       <form class="form" action="premises-licence" method="POST">
         <fieldset id="mock-address-lookup" data-required="Please answer this question">
           <!-- <div class="form-group"> -->
-            <legend><h1 class="heading-large">Where will the event be held?</h1></legend>
+            <legend><h1 class="heading-large">Where is your event taking place?</h1></legend>
           <!-- </div> -->
           <div id="address-lookup-loader"></div>
           <div class="address-lookup-step1">
@@ -28,7 +28,9 @@
             <div class="form-group">
               <button class="js-launch-lookup button">Find address</button>
             </div>
-            <a href="event-map">My location doesn't have a postcode</a>
+            <div class="form-group">
+              <a href="event-map">My location doesn't have a postcode</a>
+            </div>
           </div>
           <div class="address-lookup-step2">
             <div class="form-group">
@@ -52,6 +54,13 @@
           </div>
         </fieldset>
       </form>
+
+      <!--<details>-->
+        <!--<summary><span class="summary">Help with event location</span></summary>-->
+        <!--<div class="panel panel-border-narrow">-->
+          <!--<p>For the purposes of the Licensing Act 2003, “premises” means any place. Premises will therefore not always be a building with a formal address and postcode. Premises can include, for example, public parks, recreation grounds and private land.</p>-->
+        <!--</div>-->
+      <!--</details>-->
     </div>
 
     <div class="column-one-third">

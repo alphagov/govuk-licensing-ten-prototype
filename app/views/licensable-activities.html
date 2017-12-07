@@ -17,7 +17,7 @@
       <button class="link-back">Back</button>
 
       <form class="form" action="licensable-activity-alcohol" method="POST">
-        <div class="form-group" data-required>
+        <div class="form-group" data-required="Please choose the options that apply">
           <fieldset>
             <legend>
               <h1 class="heading-large">Will the event include any of the following?</h1>
@@ -33,11 +33,11 @@
             </div>
             <div class="multiple-choice">
               <input class="js-select-choice" id="licensable-activities-3" name="licensable-activities" type="checkbox" value="Entertainment" {{ checked('licensable-activities','Entertainment') }}>
-              <label for="licensable-activities-3">Providing entertainment, such as music, dancing or indoor sporting events</label>
+              <label for="licensable-activities-3">Providing entertainment, for example music, dancing, indoor sports</label>
             </div>
             <div class="multiple-choice">
               <input class="js-select-choice" id="licensable-activities-4" name="licensable-activities" type="checkbox" value="Nudity" {{ checked('licensable-activities','Nudity') }}>
-              <label for="licensable-activities-4">Providing entertainment which includes live display of nudity</label>
+              <label for="licensable-activities-4">Providing entertainment that includes live displays of nudity</label>
             </div>
             <div class="multiple-choice">
               <input class="js-select-choice" id="licensable-activities-5" name="licensable-activities" type="checkbox" value="Food" {{ checked('licensable-activities','Food') }}>
