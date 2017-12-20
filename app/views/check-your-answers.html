@@ -15,8 +15,8 @@ Check your answers
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-       Check your answers before sending your application
-     </h1>
+        Check your answers before sending your application
+      </h1>
 
       <h2 class="heading-medium">
         Event details
@@ -25,10 +25,10 @@ Check your answers
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">
-            Start date
+            Dates
           </dt>
           <dd class="cya-answer">
-              {{ data['event-start-date'] }}
+              {{ data['event-start-date'] }} to {{ data['event-end-date'] }}
           </dd>
           <dd class="cya-change">
             <a href="event-dates?next=check-your-answers" aria-label="Change event start date">Change</a>
@@ -57,7 +57,7 @@ Check your answers
             <a href="event-description?next=check-your-answers" aria-label="Change type of event">Change</a>
           </dd>
         </div>
-        {% if data['licensable-activities'].indexOf('Alcohol') !== -1 %}
+        {% if (data['licensable-activities']) and (data['licensable-activities'].indexOf('Alcohol') !== -1) %}
           <div>
             <dt class="cya-question">
               Selling alcohol
@@ -70,7 +70,7 @@ Check your answers
             </dd>
           </div>
         {% endif %}
-        {% if data['licensable-activities'].indexOf('Members') !== -1 %}
+        {% if (data['licensable-activities']) and (data['licensable-activities'].indexOf('Members') !== -1) %}
           <div>
             <dt class="cya-question">
               Serving alcohol
@@ -83,7 +83,7 @@ Check your answers
             </dd>
           </div>
         {% endif %}
-        {% if data['licensable-activities'].indexOf('Entertainment') !== -1 %}
+        {% if (data['licensable-activities']) and (data['licensable-activities'].indexOf('Entertainment') !== -1) %}
           <div>
             <dt class="cya-question">
               Providing entertainment
@@ -96,7 +96,7 @@ Check your answers
             </dd>
           </div>
         {% endif %}
-        {% if data['licensable-activities'].indexOf('Nudity') !== -1 %}
+        {% if (data['licensable-activities']) and (data['licensable-activities'].indexOf('Nudity') !== -1) %}
           <div>
             <dt class="cya-question">
               Providing nude entertainment
@@ -109,7 +109,7 @@ Check your answers
             </dd>
           </div>
         {% endif %}
-        {% if data['licensable-activities'].indexOf('Food') !== -1 %}
+        {% if (data['licensable-activities']) and (data['licensable-activities'].indexOf('Food') !== -1) %}
           <div>
             <dt class="cya-question">
               Late night refreshments

@@ -6,89 +6,6 @@ router.get('/', function (req, res) {
   res.render('index')
 })
 
-router.get('/task-list', function (req, res) {
-  // Define taks-list items (service's sections) using the following structure
-  // {
-  //   index: '1',
-  //   title: 'Local council',
-  //   url: 'local-council', // url of the first page on this section
-  //   description: 'Find the council you need to apply to',
-  //   values: ['local-council'] // input names mandatory for this section
-  // }
-
-  var taskListItems = [
-    {
-      index: '1',
-      title: 'Local council',
-      url: 'local-council',
-      id: 'local-council',
-      description: 'Find the council you need to apply to',
-      values: ['local-council']
-    },
-    {
-      index: '2',
-      title: 'Previous event details',
-      url: 'previous-events',
-      id: 'previous-events',
-      description: 'Provide details of any events you’ve held in the last year.',
-      values: ['previous-licence']
-    },
-    {
-      index: '3',
-      title: 'Event details',
-      url: 'event-start-date',
-      id: 'event-details',
-      description: 'Confirm activities, dates and location for this application.',
-      // old values, without date-picker
-      // values: ['event-start-day', 'event-start-month', 'event-start-year', 'event-start-hour', 'event-start-minute', 'event-duration', 'event-description', 'event-selling-tickets', 'event-postcode', 'event-location']
-      // new values, with date-picker
-      values: ['event-start-date', 'event-start-hour', 'event-start-minute', 'event-duration', 'event-description', 'event-selling-tickets', 'event-postcode', 'other-location-description']
-    },
-    {
-      index: '4',
-      title: 'Applicant details',
-      url: 'applicant-details',
-      id: 'applicant-details',
-      description: 'Supply contact information.',
-      values: ['applicant-name', 'contact-method']
-    },
-    {
-      index: '5',
-      title: 'Confirm and pay',
-      url: 'check-your-answers',
-      id: 'check-your-answers',
-      description: 'Check your application, agree to the terms and conditions, and pay the £21 fee.',
-      values: []
-    }
-  ]
-
-  // Determine the status for each section
-  for (var i = 0; i < taskListItems.length; i++) {
-    if (taskListItems[i].values) {
-      var completed = false
-      var partlyCompleted = false
-      taskListItems[i].values.forEach((value, index) => {
-        if (req.session.data[value]) {
-          partlyCompleted = true
-          completed = true
-        } else {
-          completed = false
-        }
-      })
-      if (completed) {
-        taskListItems[i].status = 'completed'
-      } else if (partlyCompleted) {
-        taskListItems[i].status = 'partly-completed'
-      } else if (i === 0 || taskListItems[i - 1].status === 'completed') {
-        taskListItems[i].status = 'actionable'
-      }
-    }
-  }
-
-  // Render task-list page
-  res.render('task-list', {items: taskListItems})
-})
-
 router.get('/start-page', function (req, res) {
   req.session.destroy()
   res.render('start-page')
@@ -96,21 +13,24 @@ router.get('/start-page', function (req, res) {
 
 router.get('/event-capacity', function (req, res) {
     // get the answer from the query string
-    var eventDuration = req.session.data['event-duration']
     var eventStartDate = req.session.data['event-start-date']
-    var array = eventStartDate.split('/')
-    var parsedEventStartDate = new Date(array[2] + '/' + array[1] + '/' + array[0])
+    var eventEndDate = req.session.data['event-end-date']
+    var arrayStart = eventStartDate.split('/')
+    var arrayEnd = eventEndDate.split('/')
+    var parsedEventStartDate = new Date(arrayStart[2] + '/' + arrayStart[1] + '/' + arrayStart[0])
+    var parsedEventEndDate = new Date(arrayEnd[2] + '/' + arrayEnd[1] + '/' + arrayEnd[0])
+    var diffDates = parseInt((parsedEventEndDate - parsedEventStartDate) / (1000 * 60 * 60 * 24));
     var today = new Date()
     var fiveDays = new Date()
     fiveDays.setDate(today.getDate() + 5)
     var tenDays = new Date()
     tenDays.setDate(today.getDate() + 10)
-    if (parseInt(eventDuration) > 7) {
+    if (parseInt(diffDates) > 7) {
         // redirect to the relevant page
-        res.redirect('ineligible')
+        res.redirect('ineligible/duration')
     } else if (parsedEventStartDate < fiveDays) {
         // redirect to the relevant page
-        res.redirect('ineligible')
+        res.redirect('ineligible/late')
     } else {
         // render the page requested
         res.render('event-capacity')
@@ -120,9 +40,9 @@ router.get('/event-capacity', function (req, res) {
 router.get('/licensable-activities', function (req, res) {
     // get the answer from the query string
     var eventCapacity = req.session.data['event-capacity']
-    if (parseInt(eventCapacity) > 501) {
+    if (parseInt(eventCapacity) > 500) {
         // redirect to the relevant page
-        res.redirect('ineligible')
+        res.redirect('ineligible/attendance')
     } else {
         // render the page requested
         res.render('licensable-activities')
@@ -237,20 +157,20 @@ router.get('/previous-events-close', function (req, res) {
     var numStandard = previousNotice.indexOf('standard') > -1 ? parseInt(previousNoticeStandard) || 0 : 0
     var numLate = previousNotice.indexOf('late') > -1 ? parseInt(previousNoticeLate) || 0 : 0
     if (personalLicence == 'yes') { // use == for checkboxes
-        if (numLate < 11 && numStandard + numLate < 51) {
+        if (numLate < 10 && numStandard + numLate < 50) {
             // render the page requested
             res.render('previous-events-close')
         } else {
             // redirect to the relevant page
-            res.redirect('ineligible')
+            res.redirect('ineligible/limit')
         }
     } else {
-        if (numLate < 3 && numStandard + numLate < 6) {
+        if (numLate < 2 && numStandard + numLate < 5) {
             // render the page requested
             res.render('previous-events-close')
         } else {
             // redirect to the relevant page
-            res.redirect('ineligible')
+            res.redirect('ineligible/limit')
         }
     }
 })
@@ -258,9 +178,12 @@ router.get('/previous-events-close', function (req, res) {
 router.get('/applicant-details-name', function (req, res) {
     // get the answer from the query string
     var previousEventsClose = req.session.data['previous-events-close']
-    if (previousEventsClose.indexOf('neither') === -1) { // use == for checkboxes
+    if (previousEventsClose.indexOf('before') > -1) {
         // redirect to the relevant page
-        res.redirect('ineligible')
+        res.redirect('ineligible/before')
+    } else if (previousEventsClose.indexOf('after') > -1) {
+        // redirect to the relevant page
+        res.redirect('ineligible/after')
     } else {
         // render the page requested
         res.render('applicant-details-name')

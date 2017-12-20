@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+When will you be selling alcohol
+{% endblock %}
+
+{% block after_header %}
+{% include "includes/timeout_modal.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <button class="link-back">Back</button>
+
+      <h1 class="heading-large">
+        When will you be selling alcohol?
+      </h1>
+
+      <form class="form" action="licensable-activity-members" method="POST" novalidate>
+
+        <div class="form-group" data-required="Please provide start time">
+          <label class="form-label-bold" for="alcohol-start-time">Start time</label>
+          <div class="form-control-1-2">
+          <input class="form-control" id="alcohol-start-time" name="alcohol-start-time" type="text" value="{{ data['alcohol-start-time'] }}" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-group" data-required="Please provide start time">
+          <label class="form-label-bold" for="alcohol-start-time">End time</label>
+          <div class="form-control-1-2">
+            <input class="form-control" id="alcohol-end-time" name="alcohol-end-time" type="text" value="{{ data['alcohol-end-time'] }}" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+      </form>
+    </div>
+
+    <div class="column-one-third">
+      <div class="application-summary">
+        <h2 class="heading-medium">Application number</h2>
+        <span class="heading-large">X2F4-59Q3</span>
+        <p class="font-small">Use this number to return to your application</p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<div class="bpk-popover-portal-1Ji7d bpk-popover-tether-element bpk-popover-tether-element-attached-center bpk-popover-tether-target-attached-center bpk-popover-tether-enabled bpk-popover-tether-element-attached-top bpk-popover-tether-target-attached-bottom" style="top: 0px; left: 0px; position: absolute; transform: translateX(167.125px) translateY(286px) translateZ(0px);">
+  <section data-reactroot="" id="event-start-date-popover" tabindex="0" role="dialog" aria-labelledby="bpk-popover-label-event-start-date-popover" class="bpk-popover-20zK_">
+    <span id="js-bpk-popover-arrow" class="bpk-popover__arrow-nFvST" role="presentation" style="left: 161px;"></span>
+    <div class="bpk-popover__inner-20BqX">
+      <span id="bpk-popover-label-event-start-date-popover" class="bpk-popover__label-1fMak">Event start date</span>
+      <div class="bpk-popover__body--padded-3uLet">
+        <div class="bpk-calendar-2nc7J bpk-datepicker__calendar-2PRPB bpk-calendar--fixed-4sg2P">
+
+            <table class="bpk-calendar-grid-WC9oX bpk-calendar-grid-transition__grid-3kL1_" aria-hidden="false">
+              <tbody>
+              <tr class="bpk-calendar-grid__week">
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU bpk-calendar-date--selected-7CwgJ" tabindex="-1" aria-pressed="false"><span aria-hidden="true">AM</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">PM</span></button></td>
+              </tr>
+              </tbody>
+            </table>
+
+            <hr style="margin-top:10px;margin-bottom:10px"/>
+
+            <table class="bpk-calendar-grid-WC9oX">
+              <tbody>
+              <tr class="bpk-calendar-grid__week">
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">1</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">2</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">3</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">4</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">5</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">6</span></button></td>
+              </tr>
+              <tr class="bpk-calendar-grid__week">
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">7</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">8</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">9</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU bpk-calendar-date--selected-7CwgJ" tabindex="-1" aria-pressed="false"><span aria-hidden="true">10</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">11</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">12</span></button></td>
+              </tr>
+              </tbody>
+            </table>
+
+            <hr style="margin-top:10px;margin-bottom:10px"/>
+
+            <table class="bpk-calendar-grid-WC9oX bpk-calendar-grid-transition__grid-3kL1_" aria-hidden="false">
+              <tbody>
+              <tr class="bpk-calendar-grid__week">
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">00</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">05</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">10</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">15</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">20</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">25</span></button></td>
+              </tr>
+              <tr class="bpk-calendar-grid__week">
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU bpk-calendar-date--selected-7CwgJ" tabindex="-1" aria-pressed="false"><span aria-hidden="true">30</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">35</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">40</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">45</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">50</span></button></td>
+                <td class="bpk-calendar-grid__date-2QaMy"><button type="button" class="bpk-calendar-date-3XwBU" tabindex="-1" aria-pressed="false"><span aria-hidden="true">55</span></button></td>
+              </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+      <footer class="bpk-popover__footer-2O6jF"><button type="button" class="bpk-link-143_C">Close</button></footer>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

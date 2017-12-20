@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Ineligible
+{% endblock %}
+
+{% block after_header %}
+  {% include "includes/timeout_modal.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <button class="link-back">Back</button>
+
+      <h1 class="heading-large">
+        You can't submit a temporary event notice
+      </h1>
+
+      <p>This event starts less than 24 hours after another event you're holding. Your event is not eligible for a temporary event notice.</p>
+
+      <p>See more about <a href="/about-licensing">licensing for events</a>.</p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

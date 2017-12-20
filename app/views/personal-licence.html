@@ -22,7 +22,7 @@
 
             <legend>
               <h1 class="heading-large">
-                {% if data['applicant-type'] == "agent" %}Does the applicant{% endif %}{% if data['applicant-type'] == "applicant" %}Do you{% endif %} hold a valid personal licence?
+                {% if data['applicant-type'] == "agent" %}Does the applicant{% endif %}{% if data['applicant-type'] == "applicant" %}Do you{% endif %} currently hold a personal alcohol licence?
               </h1>
             </legend>
 
@@ -32,40 +32,40 @@
             </div>
             <div class="panel panel-border-narrow js-hidden" id="personal-licence-yes-expand">
               <div class="form-group">
-                <label class="form-label" for="personal-licence-yes-num">Licence number</label>
+                <label class="form-label-bold" for="personal-licence-yes-num">Licence number</label>
                 <input class="form-control form-control-3-4" name="personal-licence-yes-num" data-non-numeric type="text" id="personal-licence-yes-num" pattern="[0-9]\d*(\.\d+)?" value="{{ data['personal-licence-yes-num'] }}">
               </div>
 
-              <!--<fieldset class="form-group" data-required="Please provide your date of birth">-->
-                <!--<legend>-->
-                  <!--<span>Date of issue</span>-->
-                  <!--<span class="form-hint">For example, 31 3 1980</span>-->
-                <!--</legend>-->
-                <!--<div class="form-date">-->
-                  <!--<div class="form-group form-group-day">-->
-                    <!--<label for="applicant-dob-day">Day</label>-->
-                    <!--<input class="form-control" id="applicant-dob-day" name="applicant-dob-day" type="number"-->
-                           <!--data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="31" value="{{ data['applicant-dob-day'] }}" autocomplete="off">-->
-                  <!--</div>-->
+              <fieldset class="form-group" data-required="Please provide the date of issue">
+                <legend>
+                  <span class="form-label-bold">Date of issue</span>
+                  <span class="form-hint">For example, 31 3 1980</span>
+                </legend>
+                <div class="form-date">
+                  <div class="form-group form-group-day">
+                    <label for="applicant-dob-day">Day</label>
+                    <input class="form-control" id="applicant-dob-day" name="applicant-dob-day" type="number"
+                           data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="31" value="{{ data['applicant-dob-day'] }}" autocomplete="off">
+                  </div>
 
-                  <!--<div class="form-group form-group-month">-->
-                    <!--<label for="applicant-dob-month">Month</label>-->
-                    <!--<input class="form-control" id="applicant-dob-month" name="applicant-dob-month" type="number"-->
-                           <!--data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="12" value="{{ data['applicant-dob-month'] }}" autocomplete="off">-->
-                  <!--</div>-->
+                  <div class="form-group form-group-month">
+                    <label for="applicant-dob-month">Month</label>
+                    <input class="form-control" id="applicant-dob-month" name="applicant-dob-month" type="number"
+                           data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="12" value="{{ data['applicant-dob-month'] }}" autocomplete="off">
+                  </div>
 
-                  <!--<div class="form-group form-group-year">-->
-                    <!--<label for="applicant-dob-year">Year</label>-->
-                    <!--<input class="form-control" id="applicant-dob-year" name="applicant-dob-year" type="number"-->
-                           <!--data-non-numeric data-no-keys-nav data-max-length=4 pattern="[0-9]*" min="0" max="2014" value="{{ data['applicant-dob-year'] }}" autocomplete="off">-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</fieldset>-->
+                  <div class="form-group form-group-year">
+                    <label for="applicant-dob-year">Year</label>
+                    <input class="form-control" id="applicant-dob-year" name="applicant-dob-year" type="number"
+                           data-non-numeric data-no-keys-nav data-max-length=4 pattern="[0-9]*" min="0" max="2014" value="{{ data['applicant-dob-year'] }}" autocomplete="off">
+                  </div>
+                </div>
+              </fieldset>
 
-              <!--<div class="form-group">-->
-                <!--<label class="form-label" for="personal-licence-yes-auth">Issuing authority</label>-->
-                <!--<input class="form-control form-control-3-4" name="personal-licence-yes-auth" type="text" id="personal-licence-yes-auth" value="{{ data['personal-licence-yes-auth'] }}">-->
-              <!--</div>-->
+              <div class="form-group">
+                <label class="form-label-bold" for="personal-licence-yes-auth">Issuing authority</label>
+                <input class="form-control form-control-3-4" name="personal-licence-yes-auth" type="text" id="personal-licence-yes-auth" value="{{ data['personal-licence-yes-auth'] }}">
+              </div>
 
             </div>
 

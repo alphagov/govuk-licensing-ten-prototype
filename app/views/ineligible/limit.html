@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Ineligible
+{% endblock %}
+
+{% block after_header %}
+  {% include "includes/timeout_modal.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <button class="link-back">Back</button>
+
+      <h1 class="heading-large">
+        You can't submit a temporary event notice
+      </h1>
+
+      {% if data['personal-licence'] == "yes" %}
+      <p>You can submit up to 50 TEN's and 10 Late TEN's per year.  Your event is not eligible for a temporary event notice.</p>
+      {% endif %}
+
+      {% if data['personal-licence'] == "no" %}
+      <p>You can submit up to 5 TEN's and 2 Late TEN's per year.  Your event is not eligible for a temporary event notice.</p>
+      {% endif %}
+
+      <p>See more about <a href="/about-licensing">licensing for events</a>.</p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
