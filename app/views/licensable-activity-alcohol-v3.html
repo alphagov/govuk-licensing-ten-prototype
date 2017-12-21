@@ -22,83 +22,57 @@ When will you be selling alcohol
 
       <form class="form" action="licensable-activity-members" method="POST" novalidate>
 
-        <fieldset>
-          <div class="grid-row cya-question">
-            <div class="column-one-third no-padding">
-              <h2 class="heading-medium">28 Dec 2017</h2>
-            </div>
+        {% if data['event-dates'].length > 1 %}
 
-            <div class="column-one-third no-padding">
-              <div class="form-group" data-required="Please provide start time">
-                <label class="form-label-bold" for="alcohol-start-time-1">Start time</label>
-                <span class="form-hint">For example 11:00 AM</span>
-                <input class="form-control" id="alcohol-start-time-1" name="alcohol-start-time-1" type="text" value="{{ data['alcohol-start-time-1'] }}" autocomplete="off">
+          {% for date in data['event-dates'] %}
+
+          <fieldset>
+            <div class="grid-row cya-question">
+              <div class="column-one-third no-padding">
+                <h2 class="heading-medium">{{ date }}</h2>
+              </div>
+
+              <div class="column-one-third no-padding">
+                <div class="form-group" data-required="Please provide start time">
+                  <label class="form-label-bold" for="alcohol-start-time-{{ loop.index }}">Start time</label>
+                  <span class="form-hint">For example 11:00 AM</span>
+                  <input class="form-control" id="alcohol-start-time-{{ loop.index }}" name="alcohol-start-time-{{ loop.index }}" type="text" value="{{ data['alcohol-start-time-{{ loop.index }}'] }}" autocomplete="off">
+                </div>
+              </div>
+
+              <div class="column-one-third no-padding">
+                <div class="form-group" data-required="Please provide end time">
+                  <label class="form-label-bold" for="alcohol-end-time-{{ loop.index }}">End time</label>
+                  <span class="form-hint">For example 10:00 PM</span>
+                  <input class="form-control" id="alcohol-end-time-{{ loop.index }}" name="alcohol-end-time-{{ loop.index }}" type="text" value="{{ data['alcohol-end-time-{{ loop.index }}'] }}" autocomplete="off">
+                </div>
               </div>
             </div>
+          </fieldset>
 
-            <div class="column-one-third no-padding">
-              <div class="form-group" data-required="Please provide end time">
-                <label class="form-label-bold" for="alcohol-end-time-1">End time</label>
-                <span class="form-hint">For example 10:00 PM</span>
-                <input class="form-control" id="alcohol-end-time-1" name="alcohol-end-time-1" type="text" value="{{ data['alcohol-end-time-1'] }}" autocomplete="off">
-              </div>
+          <hr style="margin-top:15px"/>
+
+          {% endfor %}
+
+        {% else %}
+
+          <div class="form-group" data-required="Please provide start time">
+            <label class="form-label-bold" for="alcohol-start-time">Start time</label>
+            <span class="form-hint">For example 11:00 AM</span>
+            <div class="form-control-1-2">
+              <input class="form-control" id="alcohol-start-time" name="alcohol-start-time" type="text" value="{{ data['alcohol-start-time'] }}" autocomplete="off">
             </div>
           </div>
-        </fieldset>
 
-        <hr style="margin-top:15px"/>
-
-        <fieldset>
-          <div class="grid-row cya-question">
-            <div class="column-one-third no-padding">
-              <h2 class="heading-medium">29 Dec 2017</h2>
-            </div>
-
-            <div class="column-one-third no-padding">
-              <div class="form-group" data-required="Please provide start time">
-                <label class="form-label-bold" for="alcohol-start-time-2">Start time</label>
-                <span class="form-hint">For example 11:00 AM</span>
-                <input class="form-control" id="alcohol-start-time-2" name="alcohol-start-time-2" type="text" value="{{ data['alcohol-start-time-2'] }}" autocomplete="off">
-              </div>
-            </div>
-
-            <div class="column-one-third no-padding">
-              <div class="form-group" data-required="Please provide end time">
-                <label class="form-label-bold" for="alcohol-end-time-2">End time</label>
-                <span class="form-hint">For example 10:00 PM</span>
-                <input class="form-control" id="alcohol-end-time-2" name="alcohol-end-time-2" type="text" value="{{ data['alcohol-end-time-2'] }}" autocomplete="off">
-              </div>
+          <div class="form-group" data-required="Please provide end time">
+            <label class="form-label-bold" for="alcohol-end-time">End time</label>
+            <span class="form-hint">For example 10:00 PM</span>
+            <div class="form-control-1-2">
+              <input class="form-control" id="alcohol-end-time" name="alcohol-end-time" type="text" value="{{ data['alcohol-end-time'] }}" autocomplete="off">
             </div>
           </div>
-        </fieldset>
 
-        <hr style="margin-top:15px"/>
-
-        <fieldset>
-          <div class="grid-row cya-question">
-            <div class="column-one-third no-padding">
-              <h2 class="heading-medium">30 Dec 2017</h2>
-            </div>
-
-            <div class="column-one-third no-padding">
-              <div class="form-group" data-required="Please provide start time">
-                <label class="form-label-bold" for="alcohol-start-time-3">Start time</label>
-                <span class="form-hint">For example 11:00 AM</span>
-                <input class="form-control" id="alcohol-start-time-3" name="alcohol-start-time-3" type="text" value="{{ data['alcohol-start-time-3'] }}" autocomplete="off">
-              </div>
-            </div>
-
-            <div class="column-one-third no-padding">
-              <div class="form-group" data-required="Please provide end time">
-                <label class="form-label-bold" for="alcohol-end-time-3">End time</label>
-                <span class="form-hint">For example 10:00 PM</span>
-                <input class="form-control" id="alcohol-end-time-3" name="alcohol-end-time-3" type="text" value="{{ data['alcohol-end-time-3'] }}" autocomplete="off">
-              </div>
-            </div>
-          </div>
-        </fieldset>
-
-        <hr style="margin-top:15px"/>
+        {% endif %}
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">

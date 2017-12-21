@@ -1,5 +1,6 @@
 var express = require('express')
 var router = express.Router()
+var moment = require('moment')
 
 // Route index page
 router.get('/', function (req, res) {
@@ -13,43 +14,50 @@ router.get('/start-page', function (req, res) {
 
 router.get('/event-capacity', function (req, res) {
     // get the answer from the query string
-    var eventStartDate = req.session.data['event-start-date']
-    var eventEndDate = req.session.data['event-end-date']
-    var arrayStart = eventStartDate.split('/')
-    var arrayEnd = eventEndDate.split('/')
-    var parsedEventStartDate = new Date(arrayStart[2] + '/' + arrayStart[1] + '/' + arrayStart[0])
-    var parsedEventEndDate = new Date(arrayEnd[2] + '/' + arrayEnd[1] + '/' + arrayEnd[0])
-    var diffDates = parseInt((parsedEventEndDate - parsedEventStartDate) / (1000 * 60 * 60 * 24));
-    var today = new Date()
-    var fiveDays = new Date()
-    fiveDays.setDate(today.getDate() + 5)
-    var tenDays = new Date()
-    tenDays.setDate(today.getDate() + 10)
-    if (parseInt(diffDates) > 7) {
+  var eventStartDate = req.session.data['event-start-date']
+  var eventEndDate = req.session.data['event-end-date']
+  var arrayStart = eventStartDate.split('/')
+  var arrayEnd = eventEndDate.split('/')
+  var parsedEventStartDate = new Date(arrayStart[2] + '/' + arrayStart[1] + '/' + arrayStart[0])
+  var parsedEventEndDate = new Date(arrayEnd[2] + '/' + arrayEnd[1] + '/' + arrayEnd[0])
+  var diffDates = parseInt((parsedEventEndDate - parsedEventStartDate) / (1000 * 60 * 60 * 24))
+  var today = new Date()
+  var fiveDays = new Date()
+  var dateList = []
+  fiveDays.setDate(today.getDate() + 5)
+  var tenDays = new Date()
+  tenDays.setDate(today.getDate() + 10)
+  if (parseInt(diffDates) > 7) {
         // redirect to the relevant page
-        res.redirect('ineligible/duration')
-    } else if (parsedEventStartDate < fiveDays) {
+    res.redirect('ineligible/duration')
+  } else if (parsedEventStartDate < fiveDays) {
         // redirect to the relevant page
-        res.redirect('ineligible/late')
-    } else {
+    res.redirect('ineligible/late')
+  } else {
         // render the page requested
-        res.render('event-capacity')
-    }
+    res.render('event-capacity')
+  }
+  for (var i = 0; i < diffDates + 1; i++) {
+    var thisDate = new Date()
+    thisDate.setTime(parsedEventStartDate.getTime() + i * 86400000)
+    dateList.push(moment(thisDate).format('D MMM YYYY'))
+  }
+  req.session.data['event-dates'] = dateList
 })
 
 router.get('/licensable-activities', function (req, res) {
     // get the answer from the query string
-    var eventCapacity = req.session.data['event-capacity']
-    if (parseInt(eventCapacity) > 500) {
+  var eventCapacity = req.session.data['event-capacity']
+  if (parseInt(eventCapacity) > 500) {
         // redirect to the relevant page
-        res.redirect('ineligible/attendance')
-    } else {
+    res.redirect('ineligible/attendance')
+  } else {
         // render the page requested
-        res.render('licensable-activities')
-    }
+    res.render('licensable-activities')
+  }
 })
 
-router.get('/licensable-activity-alcohol', function (req, res) {
+router.get('/licensable-activity-alcohol-v3', function (req, res) {
     // get the answer from the query string
   var licensableActivities = req.session.data['licensable-activities']
   if (licensableActivities == 'None') { // use == for checkboxes
@@ -57,7 +65,7 @@ router.get('/licensable-activity-alcohol', function (req, res) {
     res.redirect('no-licence-needed')
   } else if (licensableActivities.indexOf('Alcohol') !== -1) {
         // render the page requested
-    res.render('licensable-activity-alcohol')
+    res.render('licensable-activity-alcohol-v3')
   } else {
         // redirect to the relevant page
     res.redirect('licensable-activity-members')
@@ -150,55 +158,55 @@ router.get('/event-description', function (req, res) {
 
 router.get('/previous-events-close', function (req, res) {
     // get the answer from the query string
-    var personalLicence = req.session.data['personal-licence']
-    var previousNotice = req.session.data['previous-notice']
-    var previousNoticeStandard = req.session.data['previous-notice-standard-num']
-    var previousNoticeLate = req.session.data['previous-notice-late-num']
-    var numStandard = previousNotice.indexOf('standard') > -1 ? parseInt(previousNoticeStandard) || 0 : 0
-    var numLate = previousNotice.indexOf('late') > -1 ? parseInt(previousNoticeLate) || 0 : 0
-    if (personalLicence == 'yes') { // use == for checkboxes
-        if (numLate < 10 && numStandard + numLate < 50) {
+  var personalLicence = req.session.data['personal-licence']
+  var previousNotice = req.session.data['previous-notice']
+  var previousNoticeStandard = req.session.data['previous-notice-standard-num']
+  var previousNoticeLate = req.session.data['previous-notice-late-num']
+  var numStandard = previousNotice.indexOf('standard') > -1 ? parseInt(previousNoticeStandard) || 0 : 0
+  var numLate = previousNotice.indexOf('late') > -1 ? parseInt(previousNoticeLate) || 0 : 0
+  if (personalLicence == 'yes') { // use == for checkboxes
+    if (numLate < 10 && numStandard + numLate < 50) {
             // render the page requested
-            res.render('previous-events-close')
-        } else {
-            // redirect to the relevant page
-            res.redirect('ineligible/limit')
-        }
+      res.render('previous-events-close')
     } else {
-        if (numLate < 2 && numStandard + numLate < 5) {
-            // render the page requested
-            res.render('previous-events-close')
-        } else {
             // redirect to the relevant page
-            res.redirect('ineligible/limit')
-        }
+      res.redirect('ineligible/limit')
     }
+  } else {
+    if (numLate < 2 && numStandard + numLate < 5) {
+            // render the page requested
+      res.render('previous-events-close')
+    } else {
+            // redirect to the relevant page
+      res.redirect('ineligible/limit')
+    }
+  }
 })
 
 router.get('/applicant-details-name', function (req, res) {
     // get the answer from the query string
-    var previousEventsClose = req.session.data['previous-events-close']
-    if (previousEventsClose.indexOf('before') > -1) {
+  var previousEventsClose = req.session.data['previous-events-close']
+  if (previousEventsClose.indexOf('before') > -1) {
         // redirect to the relevant page
-        res.redirect('ineligible/before')
-    } else if (previousEventsClose.indexOf('after') > -1) {
+    res.redirect('ineligible/before')
+  } else if (previousEventsClose.indexOf('after') > -1) {
         // redirect to the relevant page
-        res.redirect('ineligible/after')
-    } else {
+    res.redirect('ineligible/after')
+  } else {
         // render the page requested
-        res.render('applicant-details-name')
-    }
+    res.render('applicant-details-name')
+  }
 })
 
 router.get('/agent-details-postcode', function (req, res) {
     // get the answer from the query string
-    var applicant = req.session.data['applicant-type']
+  var applicant = req.session.data['applicant-type']
 
-    if (applicant == 'applicant') {
-        res.redirect('contact-details')
-    } else {
-        res.render('agent-details-postcode')
-    }
+  if (applicant == 'applicant') {
+    res.redirect('contact-details')
+  } else {
+    res.render('agent-details-postcode')
+  }
 })
 
 router.get('/timeout', function (req, res) {
