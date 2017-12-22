@@ -24,12 +24,19 @@ When will you be selling alcohol
 
         {% if data['event-dates'].length > 1 %}
 
-          {% for date in data['event-dates'] %}
-
           <fieldset>
             <div class="grid-row cya-question">
               <div class="column-one-third no-padding">
-                <h2 class="heading-medium">{{ date }}</h2>
+                <div class="form-group">
+                  <label class="form-label-bold">Choose date</label>
+                  <span class="form-hint">&nbsp;</span>
+                  <select class="form-control form-control-3-4" id="event-address" name="event-address">
+                    <option>All dates</option>
+                    {% for date in data['event-dates'] %}
+                    <option>{{ date }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
               </div>
 
               <div class="column-one-third no-padding">
@@ -52,8 +59,6 @@ When will you be selling alcohol
 
           <hr style="margin-top:15px"/>
 
-          {% endfor %}
-
         {% else %}
 
           <div class="form-group" data-required="Please provide start time">
@@ -73,6 +78,10 @@ When will you be selling alcohol
           </div>
 
         {% endif %}
+
+        <div class="form-group">
+          <input class="button" type="button" value="Add another">
+        </div>
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
