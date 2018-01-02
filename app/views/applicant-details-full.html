@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Applicant name
+{% endblock %}
+
+{% block after_header %}
+  {% include "includes/timeout_modal.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <button class="link-back">Back</button>
+
+      <h1 class="heading-large">
+        Who is the proposed premises user?
+      </h1>
+
+      <details class="form-group">
+        <summary><span class="summary">What is a proposed premises user?</span></summary>
+        <div class="panel panel-border-narrow">
+          <p>A temporary event notice may only be given by an individual and not, for example, by an organisation or club or business. The individual giving the notice is the proposed “premises user”. Within businesses, clubs or organisations, one individual will therefore need to be identified as the proposed premises user.</p>
+        </div>
+      </details>
+
+      <form class="form" action="personal-licence" method="POST" novalidate>
+
+        <div class="form-group" data-required="Please provide the premises users name">
+          <label class="form-label form-label-bold" for="applicant-name">Full name</label>
+          <input class="form-control form-control-1-2" id="applicant-name" type="text" name="applicant-name" value="{{ data['applicant-name'] }}" autocomplete="off">
+        </div>
+
+        <div class="form-group" data-required="Please provide the premises users date of birth">
+          <fieldset>
+            <legend>
+              <span class="form-label-bold">Date of birth</span>
+              <span class="form-hint">For example, 31 3 1980</span>
+            </legend>
+            <div class="form-date">
+              <div class="form-group form-group-day">
+                <label for="applicant-dob-day">Day</label>
+                <input class="form-control" id="applicant-dob-day" name="applicant-dob-day" type="number"
+                       data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="31" value="{{ data['applicant-dob-day'] }}" autocomplete="off">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label for="applicant-dob-month">Month</label>
+                <input class="form-control" id="applicant-dob-month" name="applicant-dob-month" type="number"
+                       data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="12" value="{{ data['applicant-dob-month'] }}" autocomplete="off">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label for="applicant-dob-year">Year</label>
+                <input class="form-control" id="applicant-dob-year" name="applicant-dob-year" type="number"
+                       data-non-numeric data-no-keys-nav data-max-length=4 pattern="[0-9]*" min="0" max="2014" value="{{ data['applicant-dob-year'] }}" autocomplete="off">
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group" data-required="Please provide the premises users place of birth">
+          <label class="form-label form-label-bold" for="place-of-birth">Place of birth</label>
+          <input class="form-control form-control-1-2" id="place-of-birth" type="text" name="place-of-birth" value="{{ data['place-of-birth'] }}" autocomplete="off">
+        </div>
+
+        <div class="form-group" data-required="Please provide the premises users national insurance number">
+          <label class="form-label form-label-bold" for="applicant-ni">National Insurance number</label>
+          <span class="form-hint">For example, 'QQ 12 34 56 C'.</span>
+          <input class="form-control form-control-1-3" id="applicant-ni" type="text" name="applicant-ni" value="{{ data['applicant-ni'] }}" autocomplete="off">
+        </div>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}

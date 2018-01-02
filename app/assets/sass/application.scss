@@ -78,7 +78,8 @@ a.button-start {
   display: none;
 }
 
-.view-summary{
+.view-summary,
+.button-transparent{
   display: inline-block;
   padding: .526315em .789473em .263157em
 }
@@ -120,6 +121,20 @@ a.button-start {
   margin-left: 5px;
 }
 
+.button-secondary{
+  @include button($grey-3);
+}
+
+// Letter lists
+.list-letter {
+  list-style-type: lower-alpha;
+  padding-left: 20px;
+
+  @include ie-lte(7) {
+    padding-left: 28px;
+  }
+}
+
 // Autocomplete
 .autocomplete-wrapper{
 
@@ -131,7 +146,7 @@ a.button-start {
 // Utility class for time (Hour:Minute) separator (e.g. 14:30)
 .form-group .form-group-separator{
   width: auto;
-  padding-top: 7px;
+  padding-top: 33px;
   margin-left: -10px;
   margin-right: 10px;
 }

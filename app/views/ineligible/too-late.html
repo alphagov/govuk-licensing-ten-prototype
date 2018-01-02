@@ -17,16 +17,10 @@
       <button class="link-back">Back</button>
 
       <h1 class="heading-large">
-        You can't submit a temporary event notice
+        You don’t need a temporary event notice
       </h1>
 
-      {% if data['personal-licence'] == "yes" %}
-      <p>You can submit up to 50 TEN's including up to 10 Late TEN's per year.  Your event is not eligible for a temporary event notice.</p>
-      {% endif %}
-
-      {% if data['personal-licence'] == "no" %}
-      <p>You can submit up to 5 TEN's including up to 2 Late TEN's per year.  Your event is not eligible for a temporary event notice.</p>
-      {% endif %}
+      <p>The event you’re holding is less than 5 working days in the future. Your event is not eligible for a temporary event notice.</p>
 
       <p>See more about <a href="/about-licensing">licensing for events</a>.</p>
 

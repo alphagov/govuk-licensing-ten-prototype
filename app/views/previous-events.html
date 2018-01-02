@@ -21,8 +21,21 @@
           <fieldset>
             <legend>
               <h1 class="heading-large">
-                {% if data['applicant-type'] == "agent" %}Has the applicant{% endif %}{% if data['applicant-type'] == "applicant" %}Have you{% endif %} or any associates given any previous temporary event notices?
+                Has the proposed premises user or any associates previously given any temporary event notices?
               </h1>
+              <details class="body-text">
+                <summary><span class="summary">What is an associate?</span></summary>
+                <div class="panel panel-border-narrow">
+                  <p>An “associate” of the proposed premises user is:</p>
+                  <ol class="list list-letter">
+                    <li>the spouse or civil partner of that person</li>
+                    <li>a child, parent, grandchild, grandparent, brother or sister of that person</li>
+                    <li>an agent or employee of that person; or</li>
+                    <li>the spouse or civil partner of a person within (b) or (c).</li>
+                  </ol>
+                  <p>For these purposes, a person living with another as that person’s husband or wife is to be treated as that person’s spouse.</p>
+                </div>
+              </details>
               <span class="form-hint body-text">Include all events falling in the same calendar year as this event</span>
               <span class="body-text">Select all that apply:</span>
             </legend>
@@ -68,20 +81,6 @@
             </div>
         </div>
       </form>
-
-      <!--<details>-->
-        <!--<summary><span class="summary">What is an associate</span></summary>-->
-        <!--<div class="panel panel-border-narrow">-->
-          <!--<p>An “associate” of the proposed premises user is:</p>-->
-          <!--<ol>-->
-            <!--<li>the spouse or civil partner of that person</li>-->
-            <!--<li>a child, parent, grandchild, grandparent, brother or sister of that person</li>-->
-            <!--<li>an agent or employee of that person; or</li>-->
-            <!--<li>the spouse or civil partner of a person within (b) or (c).</li>-->
-          <!--</ol>-->
-          <!--<p>For these purposes, a person living with another as that person’s husband or wife is to be treated as that person’s spouse.</p>-->
-        <!--</div>-->
-      <!--</details>-->
     </div>
   </div>
 </main>

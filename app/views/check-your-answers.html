@@ -36,18 +36,6 @@ Check your answers
         </div>
         <div>
           <dt class="cya-question">
-            Duration
-          </dt>
-          <dd class="cya-answer">
-            {% if data['event-duration'] == 1 %}{{ data['event-duration'] }} day{% endif %}
-            {% if data['event-duration'] > 1 %}{{ data['event-duration'] }} days{% endif %}
-          </dd>
-          <dd class="cya-change">
-            <a href="event-dates?next=check-your-answers" aria-label="Change event duration">Change</a>
-          </dd>
-        </div>
-        <div>
-          <dt class="cya-question">
             Description
           </dt>
           <dd class="cya-answer">
@@ -131,7 +119,7 @@ Check your answers
         {% if data['event-address'] %}
           <div>
             <dt class="cya-question">
-              Premises
+              Address
             </dt>
             <dd class="cya-answer">
               {{ data['event-address'] }}
@@ -140,19 +128,6 @@ Check your answers
               <a href="event-postcode?next=check-your-answers" aria-label="Change premises">Change</a>
             </dd>
           </div>
-        {% endif %}
-        {% if data['lat-input'] %}
-        <div>
-          <dt class="cya-question">
-            Location
-          </dt>
-          <dd class="cya-answer">
-            {{ data['lat-input'] }}, {{ data['lng-input'] }}
-          </dd>
-          <dd class="cya-change">
-            <a href="event-postcode?next=check-your-answers" aria-label="Change location">Change</a>
-          </dd>
-        </div>
         {% endif %}
         {% if data['other-location-description'] %}
         <div>
@@ -164,6 +139,19 @@ Check your answers
           </dd>
           <dd class="cya-change">
             <a href="event-postcode?next=check-your-answers" aria-label="Change additional location information">Change</a>
+          </dd>
+        </div>
+        {% endif %}
+        {% if data['premises-area'] %}
+        <div>
+          <dt class="cya-question">
+            Areas in use
+          </dt>
+          <dd class="cya-answer">
+            {{ data['premises-area'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="premises-area?next=check-your-answers" aria-label="Change areas in use">Change</a>
           </dd>
         </div>
         {% endif %}
@@ -189,7 +177,7 @@ Check your answers
             {{ data['existing-licence-club-num'] }}
           </dd>
           <dd class="cya-change">
-            <a href="premises-licence?next=check-your-answers" aria-label="Change club premises certificate number">Change</a>
+            <a href="premises-licence?next=check-your-answers" aria-label="Change club certificate number">Change</a>
           </dd>
         </div>
         {% endif %}
@@ -275,44 +263,40 @@ Check your answers
             <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
           </dd>
         </div>
-        {% if data['contact-method'] == 'email' %}
-          <div>
-            <dt class="cya-question">
-              Email
-            </dt>
-            <dd class="cya-answer">
-              {{ data['contact-email'] }}
-            </dd>
-            <dd class="cya-change">
-              <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
-            </dd>
-          </div>
-        {% endif %}
-        {% if data['contact-method'] == 'phone' %}
-          <div>
-            <dt class="cya-question">
-              Phone number
-            </dt>
-            <dd class="cya-answer">
-              {{ data['contact-phone'] }}
-            </dd>
-            <dd class="cya-change">
-              <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
-            </dd>
-          </div>
-        {% endif %}
-          <div>
-            <dt class="cya-question">
-              Address
-            </dt>
-            <dd class="cya-answer">
-              {% if data['agent-address'] == '' %}{{ data['applicant-address'] }}{% endif %}
-              {% if data['agent-address'] %}{{ data['agent-address'] }}{% endif %}
-            </dd>
-            <dd class="cya-change">
-              <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
-            </dd>
-          </div>
+        <div>
+          <dt class="cya-question">
+            Address
+          </dt>
+          <dd class="cya-answer">
+            {{ data['contact-address'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Email
+          </dt>
+          <dd class="cya-answer">
+            {{ data['contact-email'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Phone number
+          </dt>
+          <dd class="cya-answer">
+            {{ data['contact-phone'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
+          </dd>
+        </div>
+
       </dl>
 
       <h2 class="heading-medium">
@@ -331,20 +315,10 @@ Check your answers
           </dd>
         </div>
       </dl>
-
-
-
+      
       <br>
       <div class="form-group">
         <a href="declaration" class="button">Continue</a>
-      </div>
-    </div>
-
-    <div class="column-one-third">
-      <div class="application-summary">
-        <h2 class="heading-medium">Application number</h2>
-        <span class="heading-large">X2F4-59Q3</span>
-        <p class="font-small">Use this number to return to your application</p>
       </div>
     </div>
 

@@ -32,7 +32,10 @@ router.get('/event-capacity', function (req, res) {
     res.redirect('ineligible/duration')
   } else if (parsedEventStartDate < fiveDays) {
         // redirect to the relevant page
-    res.redirect('ineligible/late')
+    res.redirect('ineligible/too-late')
+  } else if (parsedEventStartDate < tenDays) {
+      // redirect to the relevant page
+      res.redirect('ineligible/late')
   } else {
         // render the page requested
     res.render('event-capacity')
@@ -48,7 +51,7 @@ router.get('/event-capacity', function (req, res) {
 router.get('/licensable-activities', function (req, res) {
     // get the answer from the query string
   var eventCapacity = req.session.data['event-capacity']
-  if (parseInt(eventCapacity) > 500) {
+  if (parseInt(eventCapacity) > 499) {
         // redirect to the relevant page
     res.redirect('ineligible/attendance')
   } else {
