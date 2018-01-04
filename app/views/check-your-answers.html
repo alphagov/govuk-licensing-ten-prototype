@@ -195,7 +195,7 @@ Check your answers
             {{ data['applicant-name'] }}
           </dd>
           <dd class="cya-change">
-            <a href="applicant-details-name?next=check-your-answers" aria-label="Change full name">Change</a>
+            <a href="applicant-details-full?next=check-your-answers" aria-label="Change full name">Change</a>
           </dd>
         </div>
         <div>
@@ -208,31 +208,31 @@ Check your answers
             {{ data['applicant-dob-year'] }}
           </dd>
           <dd class="cya-change">
-            <a href="applicant-details-dob?next=check-your-answers" aria-label="Change date of birth">Change</a>
+            <a href="applicant-details-full?next=check-your-answers" aria-label="Change date of birth">Change</a>
           </dd>
         </div>
-        <div>
-          <dt class="cya-question">
-            Place of birth
-          </dt>
-          <dd class="cya-answer">
-            {{ data['place-of-birth'] }}
-          </dd>
-          <dd class="cya-change">
-            <a href="applicant-details-pob?next=check-your-answers" aria-label="Change place of birth">Change</a>
-          </dd>
-        </div>
-        <div>
-          <dt class="cya-question">
-            National Insurance number
-          </dt>
-          <dd class="cya-answer">
-            {{ data['applicant-ni'] }}
-          </dd>
-          <dd class="cya-change">
-            <a href="applicant-details-ni?next=check-your-answers" aria-label="Change National Insurance number">Change</a>
-          </dd>
-        </div>
+        <!--<div>-->
+          <!--<dt class="cya-question">-->
+            <!--Place of birth-->
+          <!--</dt>-->
+          <!--<dd class="cya-answer">-->
+            <!--{{ data['place-of-birth'] }}-->
+          <!--</dd>-->
+          <!--<dd class="cya-change">-->
+            <!--<a href="applicant-details-full?next=check-your-answers" aria-label="Change place of birth">Change</a>-->
+          <!--</dd>-->
+        <!--</div>-->
+        <!--<div>-->
+          <!--<dt class="cya-question">-->
+            <!--National Insurance number-->
+          <!--</dt>-->
+          <!--<dd class="cya-answer">-->
+            <!--{{ data['applicant-ni'] }}-->
+          <!--</dd>-->
+          <!--<dd class="cya-change">-->
+            <!--<a href="applicant-details-full?next=check-your-answers" aria-label="Change National Insurance number">Change</a>-->
+          <!--</dd>-->
+        <!--</div>-->
         <div>
           <dt class="cya-question">
             Address
@@ -241,7 +241,42 @@ Check your answers
             {{ data['applicant-address'] }}
           </dd>
           <dd class="cya-change">
-            <a href="applicant-details-postcode?next=check-your-answers" aria-label="Change applicant address">Change</a>
+            <a href="applicant-details-address?next=check-your-answers" aria-label="Change address">Change</a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Licence number
+          </dt>
+          <dd class="cya-answer">
+            {{ data['personal-licence-yes-num'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="personal-licence?next=check-your-answers" aria-label="Change personal licence number">Change</a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Date of issue
+          </dt>
+          <dd class="cya-answer">
+            {{ data['date-issue-day'] }}
+            {{ getMonthWord(data['date-issue-month']) }}
+            {{ data['date-issue-year'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="personal-licence?next=check-your-answers" aria-label="Change personal licence number">Change</a>
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+            Issuing authority
+          </dt>
+          <dd class="cya-answer">
+            {{ data['personal-licence-yes-auth'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="personal-licence?next=check-your-answers" aria-label="Change personal licence number">Change</a>
           </dd>
         </div>
       </dl>
@@ -271,7 +306,7 @@ Check your answers
             {{ data['contact-address'] }}
           </dd>
           <dd class="cya-change">
-            <a href="contact-details?next=check-your-answers" aria-label="Change contact method">Change</a>
+            <a href="contact-address?next=check-your-answers" aria-label="Change contact method">Change</a>
           </dd>
         </div>
         <div>
@@ -315,7 +350,7 @@ Check your answers
           </dd>
         </div>
       </dl>
-      
+
       <br>
       <div class="form-group">
         <a href="declaration" class="button">Continue</a>

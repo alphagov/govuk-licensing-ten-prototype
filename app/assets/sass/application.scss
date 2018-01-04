@@ -155,3 +155,61 @@ a.button-start {
 .bpk-calendar-grid__week button{
   line-height: 2.05;
 }
+
+// ==========================================================================
+
+.form-control {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 100%;
+  }
+}
+
+.form-control-3-4 {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 75%;
+  }
+}
+
+.form-control-2-3 {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 66.66%;
+  }
+}
+
+.form-control-1-2 {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 50%;
+  }
+}
+
+.form-control-1-3 {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 33.33%;
+  }
+}
+
+.form-control-1-4 {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 25%;
+  }
+}
+
+.form-control-1-8 {
+  width: 100%;
+
+  @include media(tablet) {
+    width: 12.5%;
+  }
+}

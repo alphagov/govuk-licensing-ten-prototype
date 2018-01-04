@@ -12,7 +12,7 @@ router.get('/start-page', function (req, res) {
   res.render('start-page')
 })
 
-router.get('/event-capacity', function (req, res) {
+router.get('/event-dates-routing', function (req, res) {
     // get the answer from the query string
   var eventStartDate = req.session.data['event-start-date']
   var eventEndDate = req.session.data['event-end-date']
@@ -27,25 +27,25 @@ router.get('/event-capacity', function (req, res) {
   fiveDays.setDate(today.getDate() + 5)
   var tenDays = new Date()
   tenDays.setDate(today.getDate() + 10)
-  if (parseInt(diffDates) > 7) {
-        // redirect to the relevant page
-    res.redirect('ineligible/duration')
-  } else if (parsedEventStartDate < fiveDays) {
-        // redirect to the relevant page
-    res.redirect('ineligible/too-late')
-  } else if (parsedEventStartDate < tenDays) {
-      // redirect to the relevant page
-      res.redirect('ineligible/late')
-  } else {
-        // render the page requested
-    res.render('event-capacity')
-  }
   for (var i = 0; i < diffDates + 1; i++) {
-    var thisDate = new Date()
-    thisDate.setTime(parsedEventStartDate.getTime() + i * 86400000)
-    dateList.push(moment(thisDate).format('D MMM YYYY'))
+      var thisDate = new Date()
+      thisDate.setTime(parsedEventStartDate.getTime() + i * 86400000)
+      dateList.push(moment(thisDate).format('D MMM YYYY'))
   }
   req.session.data['event-dates'] = dateList
+  if (parseInt(diffDates) > 7) {
+    // redirect to the relevant page
+    res.redirect('ineligible/duration')
+  } else if (parsedEventStartDate < fiveDays) {
+    // redirect to the relevant page
+    res.redirect('ineligible/too-late')
+  } else if (parsedEventStartDate < tenDays) {
+    // redirect to the relevant page
+    res.redirect('ineligible/late')
+  } else {
+    // render the page requested
+    res.render('event-capacity')
+  }
 })
 
 router.get('/licensable-activities', function (req, res) {
@@ -186,7 +186,7 @@ router.get('/previous-events-close', function (req, res) {
   }
 })
 
-router.get('/applicant-details-name', function (req, res) {
+router.get('/contact-address', function (req, res) {
     // get the answer from the query string
   var previousEventsClose = req.session.data['previous-events-close']
   if (previousEventsClose.indexOf('before') > -1) {
@@ -197,7 +197,7 @@ router.get('/applicant-details-name', function (req, res) {
     res.redirect('ineligible/after')
   } else {
         // render the page requested
-    res.render('applicant-details-name')
+    res.render('contact-address')
   }
 })
 
