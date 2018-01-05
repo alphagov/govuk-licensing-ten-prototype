@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c41e000-f13f-424d-b0cd-3e8ace87d615" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-members.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="licensable-activity-alcohol.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="87" column="51" lean-forward="false" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
+            <state relative-caret-position="310">
+              <caret line="57" column="45" lean-forward="false" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="61" />
               <folding>
                 <element signature="e#1026#1032#1" expanded="true" />
               </folding>
@@ -32,7 +31,7 @@
       <file leaf-file-name="licensable-activity-entertainment.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-entertainment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
+            <state relative-caret-position="766">
               <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
               <folding>
                 <element signature="e#1143#1149#1" expanded="true" />
@@ -44,7 +43,7 @@
       <file leaf-file-name="licensable-activity-nudity.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
+            <state relative-caret-position="-210">
               <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="23" selection-end-column="12" />
               <folding>
                 <element signature="e#1093#1099#1" expanded="true" />
@@ -63,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licensable-activity-members.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="licensable-activity-members.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-members.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+            <state relative-caret-position="399">
+              <caret line="57" column="59" lean-forward="false" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
               <folding>
                 <element signature="e#1080#1086#1" expanded="true" />
               </folding>
@@ -85,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licensable-activity-food.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="licensable-activity-food.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-food.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="-129">
               <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
               <folding>
                 <element signature="e#1020#1026#1" expanded="true" />
@@ -402,12 +401,12 @@
       <workItem from="1514982482893" duration="5883000" />
       <workItem from="1515073390700" duration="19000" />
       <workItem from="1515076528706" duration="8740000" />
-      <workItem from="1515150328387" duration="9298000" />
+      <workItem from="1515150328387" duration="10444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164265000" />
+    <option name="totallyTimeSpent" value="165411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1428" height="849" extended-state="0" />
@@ -747,36 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="87" column="51" lean-forward="false" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
-          <folding>
-            <element signature="e#1026#1032#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-entertainment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
-          <folding>
-            <element signature="e#1143#1149#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-food.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding>
-            <element signature="e#1020#1026#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2220">
@@ -793,9 +762,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="57" column="45" lean-forward="false" selection-start-line="57" selection-start-column="45" selection-end-line="57" selection-end-column="61" />
+          <folding>
+            <element signature="e#1026#1032#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-entertainment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="766">
+          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+          <folding>
+            <element signature="e#1143#1149#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
+        <state relative-caret-position="-210">
           <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="23" selection-end-column="12" />
           <folding>
             <element signature="e#1093#1099#1" expanded="true" />
@@ -805,10 +794,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-members.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+        <state relative-caret-position="399">
+          <caret line="57" column="59" lean-forward="false" selection-start-line="57" selection-start-column="59" selection-end-line="57" selection-end-column="59" />
           <folding>
             <element signature="e#1080#1086#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-food.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding>
+            <element signature="e#1020#1026#1" expanded="true" />
           </folding>
         </state>
       </provider>
