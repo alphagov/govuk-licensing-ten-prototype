@@ -19,12 +19,15 @@ When will you be serving alcohol to members of a private club
       <h1 class="heading-large">
         When will you be serving alcohol to members of a private club?
       </h1>
+      <div class="form-group">
+        <span class="form-hint">Please enter times using 24hr clock</span>
+      </div>
 
       <form class="form" action="licensable-activity-entertainment" method="POST" novalidate>
 
         {% if data['event-dates'].length > 1 %}
 
-        {% for times in data['member-times'] %}
+        {% for times in data['members-times'] %}
         <div class="grid-row cya-question">
           <fieldset>
             <div class="column-third">

@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2c41e000-f13f-424d-b0cd-3e8ace87d615" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/routes.js" afterPath="$PROJECT_DIR$/app/routes.js" />
-      <change beforePath="$PROJECT_DIR$/app/views/check-your-answers.html" afterPath="$PROJECT_DIR$/app/views/check-your-answers.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activities.html" afterPath="$PROJECT_DIR$/app/views/licensable-activities.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v2.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-alcohol-picker.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-food.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
       <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-members.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,8 +44,8 @@
       <file leaf-file-name="licensable-activity-nudity.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+            <state relative-caret-position="273">
+              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="23" selection-end-column="12" />
               <folding>
                 <element signature="e#1093#1099#1" expanded="true" />
               </folding>
@@ -61,23 +53,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="check-your-answers.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="check-your-answers.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="2220">
               <caret line="148" column="33" lean-forward="true" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licensable-activity-members.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="licensable-activity-members.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-members.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="84" column="49" lean-forward="false" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
+            <state relative-caret-position="435">
+              <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
               <folding>
-                <element signature="e#960#966#1" expanded="true" />
+                <element signature="e#1080#1086#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,8 +78,8 @@
       <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="86" column="2" lean-forward="true" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="36" />
+            <state relative-caret-position="-29">
+              <caret line="118" column="64" lean-forward="true" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -188,12 +180,12 @@
         <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol-picker.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
-        <option value="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
         <option value="$PROJECT_DIR$/app/routes.js" />
         <option value="$PROJECT_DIR$/app/views/check-your-answers.html" />
+        <option value="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
       </list>
     </option>
   </component>
@@ -410,12 +402,12 @@
       <workItem from="1514982482893" duration="5883000" />
       <workItem from="1515073390700" duration="19000" />
       <workItem from="1515076528706" duration="8740000" />
-      <workItem from="1515150328387" duration="8483000" />
+      <workItem from="1515150328387" duration="9298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163450000" />
+    <option name="totallyTimeSpent" value="164265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1428" height="849" extended-state="0" />
@@ -775,26 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
-          <folding>
-            <element signature="e#1093#1099#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-members.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="84" column="49" lean-forward="false" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
-          <folding>
-            <element signature="e#960#966#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-food.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -805,19 +777,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.js">
+    <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="86" column="2" lean-forward="true" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="36" />
+        <state relative-caret-position="2220">
+          <caret line="148" column="33" lean-forward="true" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
+    <entry file="file://$PROJECT_DIR$/app/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="148" column="33" lean-forward="true" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
+        <state relative-caret-position="-29">
+          <caret line="118" column="64" lean-forward="true" selection-start-line="118" selection-start-column="64" selection-end-line="118" selection-end-column="64" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#1093#1099#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-members.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding>
+            <element signature="e#1080#1086#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
