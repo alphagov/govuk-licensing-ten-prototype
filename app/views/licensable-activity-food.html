@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  When will you be serving hot food or drink
+When will you be serving hot food or drink
 {% endblock %}
 
 {% block after_header %}
-  {% include "includes/timeout_modal.html" %}
+{% include "includes/timeout_modal.html" %}
 {% endblock %}
 
 {% block content %}
@@ -17,54 +17,85 @@
       <button class="link-back">Back</button>
 
       <h1 class="heading-large">
-         When will you be serving hot food or drink?
+        When will you be serving hot food or drink?
       </h1>
+      <div class="form-group">
+        <span class="form-hint">Please enter times using 24hr clock</span>
+      </div>
 
       <form class="form" action="event-description" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide start time">
-          <legend>
-            <span class="form-label-bold">Start time?</span>
-            <span class="form-hint">For example, 14:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="food-start-hour">Hour</label>
-              <input class="form-control" id="food-start-hour" name="food-start-hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['food-start-hour'] }}" autocomplete="off">
+
+        {% if data['event-dates'].length > 1 %}
+
+        {% for times in data['food-times'] %}
+        <div class="grid-row cya-question">
+          <fieldset>
+            <div class="column-third">
+              <div class="form-group">
+                <label class="form-label-bold" for="food-time-{{ times }}">Date</label>
+                <span class="form-hint">&nbsp;</span>
+                <select class="form-control" id="food-time-{{ times }}" name="food-time-{{ times }}">
+                  <option>All dates</option>
+                  {% for date in data['event-dates'] %}
+                  <option value="{{ date }}" {% if data['food-time-' + times] == date %} selected="selected" {% endif %}>{{ date }}</option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
 
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="food-start-minute">Minute</label>
-              <input class="form-control" id="food-start-minute" name="food-start-minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['food-start-minute'] }}" autocomplete="off">
+            <div class="column-third">
+              <div class="form-group" data-required="Please provide start time">
+                <label class="form-label-bold" for="food-start-time-{{ times }}">Start time</label>
+                <span class="form-hint">For example, 14:30</span>
+                <input class="form-control form-control-1-2" id="food-start-time-{{ times }}" name="food-start-time-{{ times }}" type="text" value="{{ data['food-start-time-' + times] }}" autocomplete="off">
+              </div>
             </div>
 
+            <div class="column-third">
+              <div class="form-group" data-required="Please provide end time">
+                <label class="form-label-bold" for="food-end-time-{{ times }}">End time</label>
+                <span class="form-hint">For example, 20:30</span>
+                <input class="form-control form-control-1-2" id="food-end-time-{{ times }}" name="food-end-time-{{ times }}" type="text" value="{{ data['food-end-time-' + times] }}" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="column-full">
+              <a href="remove-time/food/{{ times }}">Remove this</a>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <hr style="margin-top:15px"/>
+        {% endfor %}
+
+        <div class="form-group">
+          <a href="add-time/food" class="button-secondary">Add another</a>
+        </div>
+
+        {% else %}
+
+        <div class="form-group" data-required="Please provide start time">
+          <label class="form-label-bold" for="food-start-time">Start time</label>
+          <span class="form-hint">For example, 14:30</span>
+          <div class="form-control-1-4">
+            <input class="form-control" id="food-start-time" name="food-start-time" type="text" value="{{ data['food-start-time'] }}" autocomplete="off">
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset class="form-group" data-required="Please provide end time">
-          <legend>
-            <span class="form-label-bold">End time?</span>
-            <span class="form-hint">For example, 20:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="food-end-hour">Hour</label>
-              <input class="form-control" id="food-end-hour" name="food-end-hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['food-end-hour'] }}" autocomplete="off">
-            </div>
-
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="food-end-minute">Minute</label>
-              <input class="form-control" id="food-end-minute" name="food-end-minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['food-end-minute'] }}" autocomplete="off">
-            </div>
-
+        <div class="form-group" data-required="Please provide end time">
+          <label class="form-label-bold" for="food-end-time">End time</label>
+          <span class="form-hint">For example, 20:30</span>
+          <div class="form-control-1-4">
+            <input class="form-control" id="food-end-time" name="food-end-time" type="text" value="{{ data['food-end-time'] }}" autocomplete="off">
           </div>
-        </fieldset>
+        </div>
+
+        {% endif %}
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
+          <!--<a href="check-your-answers?next=event-dates" class="view-summary">View summary</a>-->
         </div>
       </form>
     </div>

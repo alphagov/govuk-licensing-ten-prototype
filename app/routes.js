@@ -12,6 +12,57 @@ router.get('/start-page', function (req, res) {
   res.render('start-page')
 })
 
+router.get('*', function (req, res, next) {
+  var alcoholTimes = req.session.data['alcohol-times']
+  if (!alcoholTimes || alcoholTimes.length < 1) {
+    req.session.data['alcohol-times-count'] = 1
+    req.session.data['alcohol-times'] = [1]
+  }
+  var membersTimes = req.session.data['members-times']
+  if (!membersTimes || membersTimes.length < 1) {
+    req.session.data['members-times-count'] = 1
+    req.session.data['members-times'] = [1]
+  }
+  var entertainmentTimes = req.session.data['entertainment-times']
+  if (!entertainmentTimes || entertainmentTimes.length < 1) {
+    req.session.data['entertainment-times-count'] = 1
+    req.session.data['entertainment-times'] = [1]
+  }
+  var nudityTimes = req.session.data['nudity-times']
+  if (!nudityTimes || nudityTimes.length < 1) {
+    req.session.data['nudity-times-count'] = 1
+    req.session.data['nudity-times'] = [1]
+  }
+  var foodTimes = req.session.data['food-times']
+  if (!foodTimes || foodTimes.length < 1) {
+    req.session.data['food-times-count'] = 1
+    req.session.data['food-times'] = [1]
+  }
+  next()
+})
+
+router.get('/add-time/:type', function (req, res) {
+  var params = req.params
+  var count = req.session.data[params.type + '-times-count']
+  var timeArray = req.session.data[params.type + '-times']
+  count++
+  req.session.data[params.type + '-times-count'] = count
+  timeArray.push(count)
+  req.session.data[params.type + '-times'] = timeArray
+  res.redirect('/licensable-activity-' + params.type)
+})
+
+router.get('/remove-time/:type/:index', function (req, res) {
+  var params = req.params
+  var timeArray = req.session.data[params.type + '-times']
+  var timeIndex = timeArray.indexOf(parseInt(params.index))
+  if (timeIndex > -1) {
+    timeArray.splice(timeIndex, 1)
+  }
+  req.session.data[params.type + '-times'] = timeArray
+  res.redirect('/licensable-activity-' + params.type)
+})
+
 router.get('/event-dates-routing', function (req, res) {
     // get the answer from the query string
   var eventStartDate = req.session.data['event-start-date']
@@ -23,16 +74,17 @@ router.get('/event-dates-routing', function (req, res) {
   var diffDates = parseInt((parsedEventEndDate - parsedEventStartDate) / (1000 * 60 * 60 * 24))
   var today = new Date()
   var fiveDays = new Date()
-  var dateList = []
+  var dateArray = []
   fiveDays.setDate(today.getDate() + 5)
   var tenDays = new Date()
   tenDays.setDate(today.getDate() + 10)
   for (var i = 0; i < diffDates + 1; i++) {
-      var thisDate = new Date()
-      thisDate.setTime(parsedEventStartDate.getTime() + i * 86400000)
-      dateList.push(moment(thisDate).format('D MMM YYYY'))
+    var thisDate = new Date()
+    thisDate.setTime(parsedEventStartDate.getTime() + i * 86400000)
+    dateArray.push(moment(thisDate).format('D MMM YYYY'))
   }
-  req.session.data['event-dates'] = dateList
+  req.session.data['event-dates'] = dateArray
+  req.session.data['event-duration'] = diffDates
   if (parseInt(diffDates) > 7) {
     // redirect to the relevant page
     res.redirect('ineligible/duration')
@@ -60,15 +112,16 @@ router.get('/licensable-activities', function (req, res) {
   }
 })
 
-router.get('/licensable-activity-alcohol-v3', function (req, res) {
+router.get('/licensable-activity-alcohol', function (req, res) {
     // get the answer from the query string
   var licensableActivities = req.session.data['licensable-activities']
+
   if (licensableActivities == 'None') { // use == for checkboxes
         // redirect to the relevant page
     res.redirect('no-licence-needed')
   } else if (licensableActivities.indexOf('Alcohol') !== -1) {
         // render the page requested
-    res.render('licensable-activity-alcohol-v3')
+    res.render('licensable-activity-alcohol')
   } else {
         // redirect to the relevant page
     res.redirect('licensable-activity-members')

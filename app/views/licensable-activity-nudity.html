@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  When will you be providing entertainment including live display of nudity
+When will you be providing entertainment including live display of nudity
 {% endblock %}
 
 {% block after_header %}
-  {% include "includes/timeout_modal.html" %}
+{% include "includes/timeout_modal.html" %}
 {% endblock %}
 
 {% block content %}
@@ -17,54 +17,85 @@
       <button class="link-back">Back</button>
 
       <h1 class="heading-large">
-         When will you be providing entertainment including live display of nudity?
+        When will you be providing entertainment including live display of nudity?
       </h1>
+      <div class="form-group">
+        <span class="form-hint">Please enter times using 24hr clock</span>
+      </div>
 
       <form class="form" action="licensable-activity-food" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide start time">
-          <legend>
-            <span class="form-label-bold">Start time?</span>
-            <span class="form-hint">For example, 14:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="nudity-start-hour">Hour</label>
-              <input class="form-control" id="nudity-start-hour" name="nudity-start-hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['nudity-start-hour'] }}" autocomplete="off">
+
+        {% if data['event-dates'].length > 1 %}
+
+        {% for times in data['nudity-times'] %}
+        <div class="grid-row cya-question">
+          <fieldset>
+            <div class="column-third">
+              <div class="form-group">
+                <label class="form-label-bold" for="nudity-time-{{ times }}">Date</label>
+                <span class="form-hint">&nbsp;</span>
+                <select class="form-control" id="nudity-time-{{ times }}" name="nudity-time-{{ times }}">
+                  <option>All dates</option>
+                  {% for date in data['event-dates'] %}
+                  <option value="{{ date }}" {% if data['nudity-time-' + times] == date %} selected="selected" {% endif %}>{{ date }}</option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
 
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="nudity-start-minute">Minute</label>
-              <input class="form-control" id="nudity-start-minute" name="nudity-start-minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['nudity-start-minute'] }}" autocomplete="off">
+            <div class="column-third">
+              <div class="form-group" data-required="Please provide start time">
+                <label class="form-label-bold" for="nudity-start-time-{{ times }}">Start time</label>
+                <span class="form-hint">For example, 14:30</span>
+                <input class="form-control form-control-1-2" id="nudity-start-time-{{ times }}" name="nudity-start-time-{{ times }}" type="text" value="{{ data['nudity-start-time-' + times] }}" autocomplete="off">
+              </div>
             </div>
 
+            <div class="column-third">
+              <div class="form-group" data-required="Please provide end time">
+                <label class="form-label-bold" for="nudity-end-time-{{ times }}">End time</label>
+                <span class="form-hint">For example, 20:30</span>
+                <input class="form-control form-control-1-2" id="nudity-end-time-{{ times }}" name="nudity-end-time-{{ times }}" type="text" value="{{ data['nudity-end-time-' + times] }}" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="column-full">
+              <a href="remove-time/nudity/{{ times }}">Remove this</a>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <hr style="margin-top:15px"/>
+        {% endfor %}
+
+        <div class="form-group">
+          <a href="add-time/nudity" class="button-secondary">Add another</a>
+        </div>
+
+        {% else %}
+
+        <div class="form-group" data-required="Please provide start time">
+          <label class="form-label-bold" for="nudity-start-time">Start time</label>
+          <span class="form-hint">For example, 14:30</span>
+          <div class="form-control-1-4">
+            <input class="form-control" id="nudity-start-time" name="nudity-start-time" type="text" value="{{ data['nudity-start-time'] }}" autocomplete="off">
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset class="form-group" data-required="Please provide end time">
-          <legend>
-            <span class="form-label-bold">End time?</span>
-            <span class="form-hint">For example, 20:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="nudity-end-hour">Hour</label>
-              <input class="form-control" id="nudity-end-hour" name="nudity-end-hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['nudity-end-hour'] }}" autocomplete="off">
-            </div>
-
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="nudity-end-minute">Minute</label>
-              <input class="form-control" id="nudity-end-minute" name="nudity-end-minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['nudity-end-minute'] }}" autocomplete="off">
-            </div>
-
+        <div class="form-group" data-required="Please provide end time">
+          <label class="form-label-bold" for="nudity-end-time">End time</label>
+          <span class="form-hint">For example, 20:30</span>
+          <div class="form-control-1-4">
+            <input class="form-control" id="nudity-end-time" name="nudity-end-time" type="text" value="{{ data['nudity-end-time'] }}" autocomplete="off">
           </div>
-        </fieldset>
+        </div>
+
+        {% endif %}
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
+          <!--<a href="check-your-answers?next=event-dates" class="view-summary">View summary</a>-->
         </div>
       </form>
     </div>

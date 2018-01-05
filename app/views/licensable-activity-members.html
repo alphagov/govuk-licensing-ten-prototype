@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  When will you be serving alcohol to members of a private club
+When will you be serving alcohol to members of a private club
 {% endblock %}
 
 {% block after_header %}
-  {% include "includes/timeout_modal.html" %}
+{% include "includes/timeout_modal.html" %}
 {% endblock %}
 
 {% block content %}
@@ -17,54 +17,82 @@
       <button class="link-back">Back</button>
 
       <h1 class="heading-large">
-         When will you be serving alcohol to members of a private club?
+        When will you be serving alcohol to members of a private club?
       </h1>
 
       <form class="form" action="licensable-activity-entertainment" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide start time">
-          <legend>
-            <span class="form-label-bold">Start time</span>
-            <span class="form-hint">For example, 14:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="members-start-hour">Hour</label>
-              <input class="form-control" id="members-start-hour" name="members-start-hour" aria-label="Hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['members-start-hour'] }}" autocomplete="off">
+
+        {% if data['event-dates'].length > 1 %}
+
+        {% for times in data['member-times'] %}
+        <div class="grid-row cya-question">
+          <fieldset>
+            <div class="column-third">
+              <div class="form-group">
+                <label class="form-label-bold" for="members-time-{{ times }}">Date</label>
+                <span class="form-hint">&nbsp;</span>
+                <select class="form-control" id="members-time-{{ times }}" name="members-time-{{ times }}" value="{{ data['members-time-' + times] }}">
+                  <option>All dates</option>
+                  {% for date in data['event-dates'] %}
+                  <option>{{ date }}</option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
 
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="members-start-minute">Minute</label>
-              <input class="form-control" id="members-start-minute" name="members-start-minute" aria-label="Minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['members-start-minute'] }}" autocomplete="off">
+            <div class="column-third">
+              <div class="form-group" data-required="Please provide start time">
+                <label class="form-label-bold" for="members-start-time-{{ times }}">Start time</label>
+                <span class="form-hint">For example 11:00 AM</span>
+                <input class="form-control" id="members-start-time-{{ times }}" name="members-start-time-{{ times }}" type="text" value="{{ data['members-start-time-' + times] }}" autocomplete="off">
+              </div>
             </div>
 
+            <div class="column-third">
+              <div class="form-group" data-required="Please provide end time">
+                <label class="form-label-bold" for="members-end-time-{{ times }}">End time</label>
+                <span class="form-hint">For example 10:00 PM</span>
+                <input class="form-control" id="members-end-time-{{ times }}" name="members-end-time-{{ times }}" type="text" value="{{ data['members-end-time-' + times] }}" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="column-full">
+              <a href="remove-time/members/{{ times }}">Remove this</a>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <hr style="margin-top:15px"/>
+        {% endfor %}
+
+        <div class="form-group">
+          <a href="add-time/members" class="button-secondary">Add another</a>
+        </div>
+
+        {% else %}
+
+        <div class="form-group" data-required="Please provide start time">
+          <label class="form-label-bold" for="members-start-time">Start time</label>
+          <span class="form-hint">For example, 14:30</span>
+          <div class="form-control-1-4">
+            <input class="form-control" id="members-start-time" name="members-start-time" type="text" value="{{ data['members-start-time'] }}" autocomplete="off">
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset class="form-group" data-required="Please provide end time">
-          <legend>
-            <span class="form-label-bold">End time</span>
-            <span class="form-hint">For example, 20:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="members-end-hour">Hour</label>
-              <input class="form-control" id="members-end-hour" name="members-end-hour" aria-label="Hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['members-end-hour'] }}" autocomplete="off">
-            </div>
-
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="members-end-minute">Minute</label>
-              <input class="form-control" id="members-end-minute" name="members-end-minute" aria-label="Minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['members-end-minute'] }}" autocomplete="off">
-            </div>
-
+        <div class="form-group" data-required="Please provide end time">
+          <label class="form-label-bold" for="members-end-time">End time</label>
+          <span class="form-hint">For example, 20:30</span>
+          <div class="form-control-1-4">
+            <input class="form-control" id="members-end-time" name="members-end-time" type="text" value="{{ data['members-end-time'] }}" autocomplete="off">
           </div>
-        </fieldset>
+        </div>
+
+        {% endif %}
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
+          <!--<a href="check-your-answers?next=event-dates" class="view-summary">View summary</a>-->
         </div>
       </form>
     </div>

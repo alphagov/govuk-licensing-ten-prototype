@@ -3,16 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="2c41e000-f13f-424d-b0cd-3e8ace87d615" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/assets/sass/application.scss" afterPath="$PROJECT_DIR$/app/assets/sass/application.scss" />
-      <change beforePath="$PROJECT_DIR$/app/config.js" afterPath="$PROJECT_DIR$/app/config.js" />
       <change beforePath="$PROJECT_DIR$/app/routes.js" afterPath="$PROJECT_DIR$/app/routes.js" />
-      <change beforePath="$PROJECT_DIR$/app/views/applicant-details-full.html" afterPath="$PROJECT_DIR$/app/views/applicant-details-full.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/applicant-details-postcode.html" afterPath="$PROJECT_DIR$/app/views/applicant-details-address.html" />
       <change beforePath="$PROJECT_DIR$/app/views/check-your-answers.html" afterPath="$PROJECT_DIR$/app/views/check-your-answers.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/contact-details.html" afterPath="$PROJECT_DIR$/app/views/contact-details.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/event-dates.html" afterPath="$PROJECT_DIR$/app/views/event-dates.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/start-page.html" afterPath="$PROJECT_DIR$/app/views/start-page.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/licensable-activities.html" afterPath="$PROJECT_DIR$/app/views/licensable-activities.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v2.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-alcohol-picker.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-food.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-members.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,22 +25,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="licensable-activity-alcohol-v3.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html">
+      <file leaf-file-name="licensable-activity-alcohol.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
-              <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+            <state relative-caret-position="282">
+              <caret line="87" column="51" lean-forward="false" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
+              <folding>
+                <element signature="e#1026#1032#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="licensable-activity-entertainment.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-entertainment.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+              <folding>
+                <element signature="e#1143#1149#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="licensable-activity-nudity.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+              <folding>
+                <element signature="e#1093#1099#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="check-your-answers.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="148" column="33" lean-forward="true" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <file leaf-file-name="licensable-activity-members.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-members.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="324" column="2" lean-forward="false" selection-start-line="324" selection-start-column="2" selection-end-line="324" selection-end-column="2" />
+            <state relative-caret-position="330">
+              <caret line="84" column="49" lean-forward="false" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
+              <folding>
+                <element signature="e#960#966#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="86" column="2" lean-forward="true" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="licensable-activity-food.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-food.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+              <folding>
+                <element signature="e#1020#1026#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,7 +117,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>char-count.js</find>
-      <find>alcohol</find>
       <find>event-start-date</find>
       <find>members</find>
       <find>if</find>
@@ -67,6 +125,9 @@
       <find>date-picker</find>
       <find>event</find>
       <find>event-postcode</find>
+      <find>modalIdleTime</find>
+      <find>v3</find>
+      <find>alcohol</find>
     </findStrings>
     <replaceStrings>
       <replace>value=&quot;Save and Continue&quot;</replace>
@@ -82,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/index.html" />
         <option value="$PROJECT_DIR$/app/views/applicant-details-dob.html" />
         <option value="$PROJECT_DIR$/app/views/applicant-details-ni.html" />
         <option value="$PROJECT_DIR$/app/views/application-continue.html" />
@@ -101,11 +161,6 @@
         <option value="$PROJECT_DIR$/app/assets/sass/patterns/_buttons.scss" />
         <option value="$PROJECT_DIR$/app/views/premises-licence.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activities.html" />
-        <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
-        <option value="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" />
-        <option value="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
-        <option value="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
-        <option value="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
         <option value="$PROJECT_DIR$/app/views/ineligible/attendance.html" />
         <option value="$PROJECT_DIR$/govuk_modules/govuk-elements-sass/elements/_forms.scss" />
         <option value="$PROJECT_DIR$/app/views/event-capacity.html" />
@@ -120,19 +175,25 @@
         <option value="$PROJECT_DIR$/app/views/contact-address.html" />
         <option value="$PROJECT_DIR$/app/views/ineligible/late.html" />
         <option value="$PROJECT_DIR$/app/views/ineligible/limit.html" />
-        <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/time-picker.js" />
         <option value="$PROJECT_DIR$/app/assets/sass/application.scss" />
         <option value="$PROJECT_DIR$/app/config.js" />
         <option value="$PROJECT_DIR$/app/views/start-page.html" />
         <option value="$PROJECT_DIR$/app/views/event-dates.html" />
-        <option value="$PROJECT_DIR$/app/routes.js" />
         <option value="$PROJECT_DIR$/app/views/contact-details.html" />
         <option value="$PROJECT_DIR$/app/views/applicant-details-postcode.html" />
         <option value="$PROJECT_DIR$/app/views/applicant-details-full.html" />
         <option value="$PROJECT_DIR$/app/views/applicant-details-address.html" />
-        <option value="$PROJECT_DIR$/app/views/check-your-answers.html" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html" />
+        <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol-picker.html" />
+        <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
+        <option value="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
+        <option value="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" />
+        <option value="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
+        <option value="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
+        <option value="$PROJECT_DIR$/app/routes.js" />
+        <option value="$PROJECT_DIR$/app/views/check-your-answers.html" />
       </list>
     </option>
   </component>
@@ -173,6 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -210,6 +272,13 @@
               <item name="govuk_licensing_ten_prototype" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="govuk_licensing_ten_prototype" type="b2602c69:ProjectViewProjectNode" />
+              <item name="govuk_licensing_ten_prototype" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="govuk_licensing_ten_prototype" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +338,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -340,11 +408,14 @@
       <workItem from="1514887985907" duration="16000" />
       <workItem from="1514888033784" duration="13341000" />
       <workItem from="1514982482893" duration="5883000" />
+      <workItem from="1515073390700" duration="19000" />
+      <workItem from="1515076528706" duration="8740000" />
+      <workItem from="1515150328387" duration="8483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146208000" />
+    <option name="totallyTimeSpent" value="163450000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1428" height="849" extended-state="0" />
@@ -352,16 +423,16 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24403183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2320955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26083866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -382,64 +453,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/application-complete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="128" lean-forward="false" selection-start-line="21" selection-start-column="128" selection-end-line="21" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/event-description.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="100" lean-forward="false" selection-start-line="17" selection-start-column="100" selection-end-line="17" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activities.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="69" column="10" lean-forward="false" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol-v2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1442">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-entertainment.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="69" column="10" lean-forward="false" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-food.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="69" column="10" lean-forward="false" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-members.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="69" column="10" lean-forward="false" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
           <caret line="69" column="10" lean-forward="false" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
@@ -457,7 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -486,7 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="27" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -592,7 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="915">
           <caret line="61" column="10" lean-forward="false" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="75" lean-forward="false" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="923">
           <caret line="212" column="17" lean-forward="true" selection-start-line="212" selection-start-column="17" selection-end-line="212" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,15 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="328">
           <caret line="228" column="1" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="228" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/start-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="11" column="49" lean-forward="true" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,23 +639,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="0" column="697" lean-forward="false" selection-start-line="0" selection-start-column="697" selection-end-line="0" selection-end-column="697" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/time-picker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="0" column="310386" lean-forward="false" selection-start-line="0" selection-start-column="310386" selection-end-line="0" selection-end-column="310386" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/time-picker.js" />
     <entry file="file://$PROJECT_DIR$/app/views/contact-details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,23 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="20" column="97" lean-forward="true" selection-start-line="20" selection-start-column="97" selection-end-line="20" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="264" column="31" lean-forward="false" selection-start-line="264" selection-start-column="31" selection-end-line="264" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="63" lean-forward="true" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,15 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="199" column="33" lean-forward="true" selection-start-line="199" selection-start-column="33" selection-end-line="199" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="12" selection-end-line="74" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,30 +696,127 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/add-remove.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="387" column="19" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="387" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/add-remove.js" />
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="324" column="2" lean-forward="false" selection-start-line="324" selection-start-column="2" selection-end-line="324" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/start-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/prototype-admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="72" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/includes/timeout_modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activities.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="56" column="10" lean-forward="false" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol-picker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="87" column="51" lean-forward="false" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
+          <folding>
+            <element signature="e#1026#1032#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-entertainment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+          <folding>
+            <element signature="e#1143#1149#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="87" column="49" lean-forward="false" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+          <folding>
+            <element signature="e#1093#1099#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-members.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="84" column="49" lean-forward="false" selection-start-line="84" selection-start-column="49" selection-end-line="84" selection-end-column="49" />
+          <folding>
+            <element signature="e#960#966#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-food.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+          <folding>
+            <element signature="e#1020#1026#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="86" column="2" lean-forward="true" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="148" column="33" lean-forward="true" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
           <folding />
         </state>
       </provider>

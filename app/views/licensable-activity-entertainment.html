@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  When will you be providing entertainment, such as music, dancing or indoor sporting events
+When will you be providing entertainment, such as music, dancing or indoor sporting events
 {% endblock %}
 
 {% block after_header %}
-  {% include "includes/timeout_modal.html" %}
+{% include "includes/timeout_modal.html" %}
 {% endblock %}
 
 {% block content %}
@@ -17,54 +17,85 @@
       <button class="link-back">Back</button>
 
       <h1 class="heading-large">
-         When will you be providing entertainment, such as music, dancing or indoor sporting events?
+        When will you be providing entertainment, such as music, dancing or indoor sporting events?
       </h1>
+      <div class="form-group">
+        <span class="form-hint">Please enter times using 24hr clock</span>
+      </div>
 
       <form class="form" action="licensable-activity-nudity" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide start time">
-          <legend>
-            <span class="form-label-bold">Start time?</span>
-            <span class="form-hint">For example, 14:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="entertainment-start-hour">Hour</label>
-              <input class="form-control" id="entertainment-start-hour" name="entertainment-start-hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['entertainment-start-hour'] }}" autocomplete="off">
+
+        {% if data['event-dates'].length > 1 %}
+
+        {% for times in data['entertainment-times'] %}
+        <div class="grid-row cya-question">
+          <fieldset>
+            <div class="column-third">
+              <div class="form-group">
+                <label class="form-label-bold" for="entertainment-time-{{ times }}">Date</label>
+                <span class="form-hint">&nbsp;</span>
+                <select class="form-control" id="entertainment-time-{{ times }}" name="entertainment-time-{{ times }}">
+                  <option>All dates</option>
+                  {% for date in data['event-dates'] %}
+                  <option value="{{ date }}" {% if data['entertainment-time-' + times] == date %} selected="selected" {% endif %}>{{ date }}</option>
+                  {% endfor %}
+                </select>
+              </div>
             </div>
 
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="entertainment-start-minute">Minute</label>
-              <input class="form-control" id="entertainment-start-minute" name="entertainment-start-minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['entertainment-start-minute'] }}" autocomplete="off">
+            <div class="column-third">
+              <div class="form-group" data-required="Please provide start time">
+                <label class="form-label-bold" for="entertainment-start-time-{{ times }}">Start time</label>
+                <span class="form-hint">For example, 14:30</span>
+                <input class="form-control form-control-1-2" id="entertainment-start-time-{{ times }}" name="entertainment-start-time-{{ times }}" type="text" value="{{ data['entertainment-start-time-' + times] }}" autocomplete="off">
+              </div>
             </div>
 
+            <div class="column-third">
+              <div class="form-group" data-required="Please provide end time">
+                <label class="form-label-bold" for="entertainment-end-time-{{ times }}">End time</label>
+                <span class="form-hint">For example, 20:30</span>
+                <input class="form-control form-control-1-2" id="entertainment-end-time-{{ times }}" name="entertainment-end-time-{{ times }}" type="text" value="{{ data['entertainment-end-time-' + times] }}" autocomplete="off">
+              </div>
+            </div>
+
+            <div class="column-full">
+              <a href="remove-time/entertainment/{{ times }}">Remove this</a>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <hr style="margin-top:15px"/>
+        {% endfor %}
+
+        <div class="form-group">
+          <a href="add-time/entertainment" class="button-secondary">Add another</a>
+        </div>
+
+        {% else %}
+
+        <div class="form-group" data-required="Please provide start time">
+          <label class="form-label-bold" for="entertainment-start-time">Start time</label>
+          <span class="form-hint">For example, 14:30</span>
+          <div class="form-control-1-4">
+            <input class="form-control" id="entertainment-start-time" name="entertainment-start-time" type="text" value="{{ data['entertainment-start-time'] }}" autocomplete="off">
           </div>
-        </fieldset>
+        </div>
 
-        <fieldset class="form-group" data-required="Please provide end time">
-          <legend>
-            <span class="form-label-bold">End time?</span>
-            <span class="form-hint">For example, 20:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="entertainment-end-hour">Hour</label>
-              <input class="form-control" id="entertainment-end-hour" name="entertainment-end-hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['entertainment-end-hour'] }}" autocomplete="off">
-            </div>
-
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="entertainment-end-minute">Minute</label>
-              <input class="form-control" id="entertainment-end-minute" name="entertainment-end-minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['entertainment-end-minute'] }}" autocomplete="off">
-            </div>
-
+        <div class="form-group" data-required="Please provide end time">
+          <label class="form-label-bold" for="entertainment-end-time">End time</label>
+          <span class="form-hint">For example, 20:30</span>
+          <div class="form-control-1-4">
+            <input class="form-control" id="entertainment-end-time" name="entertainment-end-time" type="text" value="{{ data['entertainment-end-time'] }}" autocomplete="off">
           </div>
-        </fieldset>
+        </div>
+
+        {% endif %}
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
+          <!--<a href="check-your-answers?next=event-dates" class="view-summary">View summary</a>-->
         </div>
       </form>
     </div>

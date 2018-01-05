@@ -28,7 +28,11 @@ Check your answers
             Dates
           </dt>
           <dd class="cya-answer">
+            {% if data['event-duration'] > 1 %}
               {{ data['event-start-date'] }} to {{ data['event-end-date'] }}
+            {% else %}
+              {{ data['event-start-date'] }}
+            {% endif %}
           </dd>
           <dd class="cya-change">
             <a href="event-dates?next=check-your-answers" aria-label="Change event start date">Change</a>
@@ -48,10 +52,16 @@ Check your answers
         {% if (data['licensable-activities']) and (data['licensable-activities'].indexOf('Alcohol') !== -1) %}
           <div>
             <dt class="cya-question">
-              Selling alcohol
+              Alcohol sales
             </dt>
             <dd class="cya-answer">
-              {{ data['alcohol-start-hour'] }}:{{ data['alcohol-start-minute'] }} to {{ data['alcohol-end-hour'] }}:{{ data['alcohol-end-minute'] }}
+              {% if data['event-duration'] > 1 %}
+                {% for times in data['alcohol-times'] %}
+                <span>{{ data['alcohol-time-' + times] }} from {{ data['alcohol-start-time-' + times] }} to {{ data['alcohol-end-time-' + times] }}</span><br/>
+                {% endfor %}
+              {% else %}
+                {{ data['alcohol-start-time'] }} to {{ data['alcohol-end-time'] }}
+              {% endif %}
             </dd>
             <dd class="cya-change">
               <a href="licensable-activity-alcohol?next=check-your-answers" aria-label="Change alcohol sale times">Change</a>
@@ -61,10 +71,16 @@ Check your answers
         {% if (data['licensable-activities']) and (data['licensable-activities'].indexOf('Members') !== -1) %}
           <div>
             <dt class="cya-question">
-              Serving alcohol
+              Serving alcohol to members
             </dt>
             <dd class="cya-answer">
-              {{ data['members-start-hour'] }}:{{ data['members-start-minute'] }} to {{ data['members-end-hour'] }}:{{ data['members-end-minute'] }}
+              {% if data['event-duration'] > 1 %}
+                {% for times in data['members-times'] %}
+                  <span>{{ data['members-time-' + times] }} from {{ data['members-start-time-' + times] }} to {{ data['members-end-time-' + times] }}</span><br/>
+                {% endfor %}
+              {% else %}
+                {{ data['members-start-time'] }} to {{ data['members-end-time'] }}
+              {% endif %}
             </dd>
             <dd class="cya-change">
               <a href="licensable-activity-members?next=check-your-answers" aria-label="Change alcohol serving times">Change</a>
@@ -77,7 +93,13 @@ Check your answers
               Providing entertainment
             </dt>
             <dd class="cya-answer">
-              {{ data['entertainment-start-hour'] }}:{{ data['entertainment-start-minute'] }} to {{ data['entertainment-end-hour'] }}:{{ data['entertainment-end-minute'] }}
+              {% if data['event-duration'] > 1 %}
+                {% for times in data['entertainment-times'] %}
+                  <span>{{ data['entertainment-time-' + times] }} from {{ data['entertainment-start-time-' + times] }} to {{ data['entertainment-end-time-' + times] }}</span><br/>
+                {% endfor %}
+              {% else %}
+                {{ data['entertainment-start-time'] }} to {{ data['entertainment-end-time'] }}
+              {% endif %}
             </dd>
             <dd class="cya-change">
               <a href="licensable-activity-entertainment?next=check-your-answers" aria-label="Change entertainment times">Change</a>
@@ -90,7 +112,13 @@ Check your answers
               Providing nude entertainment
             </dt>
             <dd class="cya-answer">
-              {{ data['nudity-start-hour'] }}:{{ data['nudity-start-minute'] }} to {{ data['nudity-end-hour'] }}:{{ data['nudity-end-minute'] }}
+              {% if data['event-duration'] > 1 %}
+                {% for times in data['nudity-times'] %}
+                  <span>{{ data['nudity-time-' + times] }} from {{ data['nudity-start-time-' + times] }} to {{ data['nudity-end-time-' + times] }}</span><br/>
+                {% endfor %}
+              {% else %}
+                {{ data['nudity-start-time'] }} to {{ data['nudity-end-time'] }}
+              {% endif %}
             </dd>
             <dd class="cya-change">
               <a href="licensable-activity-nudity?next=check-your-answers" aria-label="Change nudity times">Change</a>
@@ -103,7 +131,13 @@ Check your answers
               Late night refreshments
             </dt>
             <dd class="cya-answer">
-              {{ data['food-start-hour'] }}:{{ data['food-start-minute'] }} to {{ data['food-end-hour'] }}:{{ data['food-end-minute'] }}
+              {% if data['event-duration'] > 1 %}
+                {% for times in data['food-times'] %}
+                  <span>{{ data['food-time-' + times] }} from {{ data['food-start-time-' + times] }} to {{ data['food-end-time-' + times] }}</span><br/>
+                {% endfor %}
+              {% else %}
+                {{ data['food-start-time'] }} to {{ data['food-end-time'] }}
+              {% endif %}
             </dd>
             <dd class="cya-change">
               <a href="licensable-activity-food?next=check-your-answers" aria-label="Change food times">Change</a>

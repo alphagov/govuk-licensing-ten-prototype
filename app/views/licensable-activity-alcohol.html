@@ -19,52 +19,83 @@ When will you be selling alcohol
       <h1 class="heading-large">
         When will you be selling alcohol?
       </h1>
+      <div class="form-group">
+      <span class="form-hint">Please enter times using 24hr clock</span>
+      </div>
 
       <form class="form" action="licensable-activity-members" method="POST" novalidate>
-        <fieldset class="form-group" data-required="Please provide start time">
-          <legend>
-            <span class="form-label-bold">Start time</span>
+
+        {% if data['event-dates'].length > 1 %}
+
+        {% for times in data['alcohol-times'] %}
+          <div class="grid-row cya-question">
+            <fieldset>
+              <div class="column-third">
+                <div class="form-group">
+                  <label class="form-label-bold" for="alcohol-time-{{ times }}">Date</label>
+                  <span class="form-hint">&nbsp;</span>
+                  <select class="form-control" id="alcohol-time-{{ times }}" name="alcohol-time-{{ times }}">
+                    <option>All dates</option>
+                    {% for date in data['event-dates'] %}
+                    <option value="{{ date }}" {% if data['alcohol-time-' + times] == date %} selected="selected" {% endif %}>{{ date }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+
+              <div class="column-third">
+                <div class="form-group" data-required="Please provide start time">
+                  <label class="form-label-bold" for="alcohol-start-time-{{ times }}">Start time</label>
+                  <span class="form-hint">For example, 14:30</span>
+                  <input class="form-control form-control-1-2" id="alcohol-start-time-{{ times }}" name="alcohol-start-time-{{ times }}" type="text" value="{{ data['alcohol-start-time-' + times] }}" autocomplete="off">
+                </div>
+              </div>
+
+              <div class="column-third">
+                <div class="form-group" data-required="Please provide end time">
+                  <label class="form-label-bold" for="alcohol-end-time-{{ times }}">End time</label>
+                  <span class="form-hint">For example, 20:30</span>
+                  <input class="form-control form-control-1-2" id="alcohol-end-time-{{ times }}" name="alcohol-end-time-{{ times }}" type="text" value="{{ data['alcohol-end-time-' + times] }}" autocomplete="off">
+                </div>
+              </div>
+
+              <div class="column-full">
+                <a href="remove-time/alcohol/{{ times }}">Remove this</a>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <hr style="margin-top:15px"/>
+        {% endfor %}
+
+        <div class="form-group">
+          <a href="add-time/alcohol" class="button-secondary">Add another</a>
+        </div>
+
+        {% else %}
+
+          <div class="form-group" data-required="Please provide start time">
+            <label class="form-label-bold" for="alcohol-start-time">Start time</label>
             <span class="form-hint">For example, 14:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="alcohol-start-hour">Hour</label>
-              <input class="form-control" id="alcohol-start-hour" name="alcohol-start-hour" aria-label="Hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['alcohol-start-hour'] }}" autocomplete="off">
+            <div class="form-control-1-4">
+              <input class="form-control" id="alcohol-start-time" name="alcohol-start-time" type="text" value="{{ data['alcohol-start-time'] }}" autocomplete="off">
             </div>
-
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="alcohol-start-minute">Minute</label>
-              <input class="form-control" id="alcohol-start-minute" name="alcohol-start-minute" aria-label="Minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['alcohol-start-minute'] }}" autocomplete="off">
-            </div>
-
           </div>
-        </fieldset>
 
-        <fieldset class="form-group" data-required="Please provide end time">
-          <legend>
-            <span class="form-label-bold">End time</span>
+          <div class="form-group" data-required="Please provide end time">
+            <label class="form-label-bold" for="alcohol-end-time">End time</label>
             <span class="form-hint">For example, 20:30</span>
-          </legend>
-          <div class="form-date">
-            <div class="form-group form-group-hour">
-              <label for="alcohol-end-hour">Hour</label>
-              <input class="form-control" id="alcohol-end-hour" name="alcohol-end-hour" aria-label="Hour" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="24" value="{{ data['alcohol-end-hour'] }}" autocomplete="off">
+            <div class="form-control-1-4">
+              <input class="form-control" id="alcohol-end-time" name="alcohol-end-time" type="text" value="{{ data['alcohol-end-time'] }}" autocomplete="off">
             </div>
-
-            <div class="form-group form-group-separator">:</div>
-
-            <div class="form-group form-group-minute">
-              <label for="alcohol-end-minute">Minute</label>
-              <input class="form-control" id="alcohol-end-minute" name="alcohol-end-minute" aria-label="Minute" type="number" data-non-numeric data-no-keys-nav data-max-length=2 pattern="[0-9]*" min="0" max="59" value="{{ data['alcohol-end-minute'] }}" autocomplete="off">
-            </div>
-
           </div>
-        </fieldset>
+
+        {% endif %}
 
         <div class="form-group">
           <input class="button" type="submit" value="Continue">
+          <!--<a href="check-your-answers?next=event-dates" class="view-summary">View summary</a>-->
         </div>
       </form>
     </div>
