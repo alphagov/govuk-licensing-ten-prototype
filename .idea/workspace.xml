@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c41e000-f13f-424d-b0cd-3e8ace87d615" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/validation.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/validation.js" />
-      <change beforePath="$PROJECT_DIR$/app/routes.js" afterPath="$PROJECT_DIR$/app/routes.js" />
-      <change beforePath="$PROJECT_DIR$/app/views/index.html" afterPath="$PROJECT_DIR$/app/views/index.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-entertainment.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-food.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-members.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
-      <change beforePath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" afterPath="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
+      <change beforePath="$PROJECT_DIR$/app/views/check-your-answers.html" afterPath="$PROJECT_DIR$/app/views/check-your-answers.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -67,11 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="licensable-activity-entertainment.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="licensable-activity-entertainment.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-entertainment.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-340">
-              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="59" />
+              <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="check-your-answers.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="280" column="47" lean-forward="false" selection-start-line="280" selection-start-column="47" selection-end-line="280" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -81,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="57" />
+              <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="57" />
               <folding>
                 <element signature="e#1093#1099#1" expanded="true" />
               </folding>
@@ -105,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="430">
-              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="145" />
+              <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="145" />
               <folding>
                 <element signature="e#1026#1032#1" expanded="true" />
               </folding>
@@ -192,7 +193,6 @@
         <option value="$PROJECT_DIR$/app/views/applicant-details-address.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol-v3.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol-picker.html" />
-        <option value="$PROJECT_DIR$/app/views/check-your-answers.html" />
         <option value="$PROJECT_DIR$/app/views/index.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-alcohol.html" />
         <option value="$PROJECT_DIR$/app/routes.js" />
@@ -202,6 +202,7 @@
         <option value="$PROJECT_DIR$/app/views/licensable-activity-nudity.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-food.html" />
         <option value="$PROJECT_DIR$/app/views/licensable-activity-members.html" />
+        <option value="$PROJECT_DIR$/app/views/check-your-answers.html" />
       </list>
     </option>
   </component>
@@ -336,14 +337,6 @@
               <item name="govuk_frontend_toolkit" type="462c0819:PsiDirectoryNode" />
               <item name="javascripts" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="govuk_licensing_ten_prototype" type="b2602c69:ProjectViewProjectNode" />
-              <item name="govuk_licensing_ten_prototype" type="462c0819:PsiDirectoryNode" />
-              <item name="govuk_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="govuk_frontend_toolkit" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -421,12 +414,12 @@
       <workItem from="1515076528706" duration="8740000" />
       <workItem from="1515150328387" duration="10677000" />
       <workItem from="1515174396388" duration="274000" />
-      <workItem from="1515406223830" duration="5195000" />
+      <workItem from="1515406223830" duration="7807000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171113000" />
+    <option name="totallyTimeSpent" value="173725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-288" y="-1018" width="1831" height="958" extended-state="0" />
@@ -725,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="148" column="33" lean-forward="false" selection-start-line="148" selection-start-column="33" selection-end-line="148" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/VERSION.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -783,7 +769,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-alcohol.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="145" />
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="145" />
           <folding>
             <element signature="e#1026#1032#1" expanded="true" />
           </folding>
@@ -793,7 +779,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-nudity.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="57" />
+          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="57" />
           <folding>
             <element signature="e#1093#1099#1" expanded="true" />
           </folding>
@@ -823,7 +809,15 @@
     <entry file="file://$PROJECT_DIR$/app/views/licensable-activity-entertainment.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-340">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="59" />
+          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/check-your-answers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="280" column="47" lean-forward="false" selection-start-line="280" selection-start-column="47" selection-end-line="280" selection-end-column="47" />
           <folding />
         </state>
       </provider>

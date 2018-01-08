@@ -278,6 +278,7 @@ Check your answers
             <a href="applicant-details-address?next=check-your-answers" aria-label="Change address">Change</a>
           </dd>
         </div>
+        {% if data['personal-licence'] == 'yes' %}
         <div>
           <dt class="cya-question">
             Licence number
@@ -313,6 +314,7 @@ Check your answers
             <a href="personal-licence?next=check-your-answers" aria-label="Change personal licence number">Change</a>
           </dd>
         </div>
+        {% endif %}
       </dl>
 
       <h2 class="heading-medium">
