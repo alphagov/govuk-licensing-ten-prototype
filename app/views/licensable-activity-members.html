@@ -34,10 +34,10 @@ When will you be serving alcohol to members of a private club
               <div class="form-group">
                 <label class="form-label-bold" for="members-time-{{ times }}">Date</label>
                 <span class="form-hint">&nbsp;</span>
-                <select class="form-control" id="members-time-{{ times }}" name="members-time-{{ times }}" value="{{ data['members-time-' + times] }}">
+                <select class="form-control" id="members-time-{{ times }}" name="members-time-{{ times }}">
                   <option>All dates</option>
                   {% for date in data['event-dates'] %}
-                  <option>{{ date }}</option>
+                  <option value="{{ date }}" {% if data['members-time-' + times] == date %} selected="selected" {% endif %}>{{ date }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -46,7 +46,7 @@ When will you be serving alcohol to members of a private club
             <div class="column-third">
               <div class="form-group" data-required="Please provide start time">
                 <label class="form-label-bold" for="members-start-time-{{ times }}">Start time</label>
-                <span class="form-hint">For example 11:00 AM</span>
+                <span class="form-hint">For example, 14:30</span>
                 <input class="form-control form-control-1-2" id="members-start-time-{{ times }}" name="members-start-time-{{ times }}" type="text" value="{{ data['members-start-time-' + times] }}" autocomplete="off">
               </div>
             </div>
@@ -54,13 +54,13 @@ When will you be serving alcohol to members of a private club
             <div class="column-third">
               <div class="form-group" data-required="Please provide end time">
                 <label class="form-label-bold" for="members-end-time-{{ times }}">End time</label>
-                <span class="form-hint">For example 10:00 PM</span>
+                <span class="form-hint">For example, 20:30</span>
                 <input class="form-control form-control-1-2" id="members-end-time-{{ times }}" name="members-end-time-{{ times }}" type="text" value="{{ data['members-end-time-' + times] }}" autocomplete="off">
               </div>
             </div>
 
             <div class="column-full">
-              <a href="remove-time/members/{{ times }}">Remove this</a>
+              <a href="licensable-activity-members/remove-time/members/{{ times }}">Remove this</a>
             </div>
 
           </fieldset>
@@ -70,7 +70,7 @@ When will you be serving alcohol to members of a private club
         {% endfor %}
 
         <div class="form-group">
-          <a href="add-time/members" class="button-secondary">Add another</a>
+          <a href="licensable-activity-members/add-time/members" class="button-secondary">Add another</a>
         </div>
 
         {% else %}

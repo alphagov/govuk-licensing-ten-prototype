@@ -41,6 +41,16 @@ $(document).ready(function () {
     event.preventDefault()
   })
 
+  $('.add-remove').on('click', function (event) {
+    var oldAction = $('form')[0].getAttribute('action')
+    var newAction = this.getAttribute('href')
+    $('form').attr('action', newAction)
+    $(document).off('submit', 'form')
+    $('form').submit()
+    $('form').attr('action', oldAction)
+    event.preventDefault()
+  })
+
   // Character Count component
   if ($('.js-character-counter').length) {
     var characterCount = new GOVUK.CharCount()

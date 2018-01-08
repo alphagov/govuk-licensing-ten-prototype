@@ -2,16 +2,6 @@ var express = require('express')
 var router = express.Router()
 var moment = require('moment')
 
-// Route index page
-router.get('/', function (req, res) {
-  res.render('index')
-})
-
-router.get('/start-page', function (req, res) {
-  req.session.destroy()
-  res.render('start-page')
-})
-
 router.get('*', function (req, res, next) {
   var alcoholTimes = req.session.data['alcohol-times']
   if (!alcoholTimes || alcoholTimes.length < 1) {
@@ -41,7 +31,17 @@ router.get('*', function (req, res, next) {
   next()
 })
 
-router.get('/add-time/:type', function (req, res) {
+// Route index page
+router.get('/', function (req, res) {
+  res.render('index')
+})
+
+router.get('/start-page', function (req, res) {
+  req.session.destroy()
+  res.render('start-page')
+})
+
+router.get('/licensable-activity-*/add-time/:type', function (req, res) {
   var params = req.params
   var count = req.session.data[params.type + '-times-count']
   var timeArray = req.session.data[params.type + '-times']
@@ -52,7 +52,7 @@ router.get('/add-time/:type', function (req, res) {
   res.redirect('/licensable-activity-' + params.type)
 })
 
-router.get('/remove-time/:type/:index', function (req, res) {
+router.get('/licensable-activity-*/remove-time/:type/:index', function (req, res) {
   var params = req.params
   var timeArray = req.session.data[params.type + '-times']
   var timeIndex = timeArray.indexOf(parseInt(params.index))
