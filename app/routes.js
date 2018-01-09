@@ -71,7 +71,7 @@ router.get('/event-dates-routing', function (req, res) {
   var arrayEnd = eventEndDate.split('/')
   var parsedEventStartDate = new Date(arrayStart[2] + '/' + arrayStart[1] + '/' + arrayStart[0])
   var parsedEventEndDate = new Date(arrayEnd[2] + '/' + arrayEnd[1] + '/' + arrayEnd[0])
-  var diffDates = parseInt((parsedEventEndDate - parsedEventStartDate) / (1000 * 60 * 60 * 24))
+  var diffDates = parseInt((parsedEventEndDate - parsedEventStartDate) / (1000 * 60 * 60 * 24)) + 1
   var today = new Date()
   var fiveDays = new Date()
   var dateArray = []
