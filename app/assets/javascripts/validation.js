@@ -26,7 +26,6 @@ function validateAll (reqFields) {
   var invalidFields = []
   for (var i = 0; i < reqFields.length; i++) {
     var $formGroup = $(reqFields[i])
-    console.log($formGroup, $formGroup.is(':visible'))
     if ($formGroup.is(':visible')) {
       var invalid = validateSingleField($formGroup)
       if (invalid) {
