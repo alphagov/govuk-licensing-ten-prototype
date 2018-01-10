@@ -92,9 +92,11 @@ router.get('/event-dates-routing', function (req, res) {
     // redirect to the relevant page
     res.redirect('ineligible/too-late')
   } else if (parsedEventStartDate < tenDays) {
+    req.session.data['late-ten'] = true
     // redirect to the relevant page
     res.redirect('ineligible/late')
   } else {
+    req.session.data['late-ten'] = false
     // render the page requested
     res.render('event-capacity')
   }
@@ -263,6 +265,22 @@ router.get('/agent-details-postcode', function (req, res) {
   } else {
     res.render('agent-details-postcode')
   }
+})
+
+router.get('/check-your-answers', function (req, res) {
+  // get the answer from the query string
+  var eventStartDate = req.session.data['event-start-date']
+  var arrayStart = eventStartDate.split('/')
+  var parsedEventStartDate = new Date(arrayStart[2] + '/' + arrayStart[1] + '/' + arrayStart[0])
+  var today = new Date()
+  var tenDays = new Date()
+  tenDays.setDate(today.getDate() + 10)
+  if (parsedEventStartDate < tenDays) {
+    req.session.data['late-ten'] = true
+  } else {
+    req.session.data['late-ten'] = false
+  }
+  res.render('check-your-answers')
 })
 
 router.get('/timeout', function (req, res) {

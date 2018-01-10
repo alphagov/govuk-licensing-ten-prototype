@@ -245,31 +245,35 @@ Check your answers
             <a href="applicant-details-full?next=check-your-answers" aria-label="Change date of birth">Change</a>
           </dd>
         </div>
-        <!--<div>-->
-          <!--<dt class="cya-question">-->
-            <!--Place of birth-->
-          <!--</dt>-->
-          <!--<dd class="cya-answer">-->
-            <!--{{ data['place-of-birth'] }}-->
-          <!--</dd>-->
-          <!--<dd class="cya-change">-->
-            <!--<a href="applicant-details-full?next=check-your-answers" aria-label="Change place of birth">Change</a>-->
-          <!--</dd>-->
-        <!--</div>-->
-        <!--<div>-->
-          <!--<dt class="cya-question">-->
-            <!--National Insurance number-->
-          <!--</dt>-->
-          <!--<dd class="cya-answer">-->
-            <!--{{ data['applicant-ni'] }}-->
-          <!--</dd>-->
-          <!--<dd class="cya-change">-->
-            <!--<a href="applicant-details-full?next=check-your-answers" aria-label="Change National Insurance number">Change</a>-->
-          <!--</dd>-->
-        <!--</div>-->
+        {% if data['place-of-birth'] %}
         <div>
           <dt class="cya-question">
-            Address
+            Place of birth
+          </dt>
+          <dd class="cya-answer">
+            {{ data['place-of-birth'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="applicant-details-full?next=check-your-answers" aria-label="Change place of birth">Change</a>
+          </dd>
+        </div>
+        {% endif %}
+        {% if data['applicant-ni'] %}
+        <div>
+          <dt class="cya-question">
+            National Insurance number
+          </dt>
+          <dd class="cya-answer">
+            {{ data['applicant-ni'] }}
+          </dd>
+          <dd class="cya-change">
+            <a href="applicant-details-full?next=check-your-answers" aria-label="Change National Insurance number">Change</a>
+          </dd>
+        </div>
+        {% endif %}
+        <div>
+          <dt class="cya-question">
+            Home address
           </dt>
           <dd class="cya-answer">
             {{ data['applicant-address'] }}
@@ -374,6 +378,18 @@ Check your answers
         Summary
       </h2>
       <dl class="govuk-check-your-answers cya-questions-short">
+        <div>
+          <dt class="cya-question">
+            Type
+          </dt>
+          <dd class="cya-answer">
+            {% if data['late-ten'] === true %}Late Temporary Event Notice{% endif %}
+            {% if data['late-ten'] === false %}Standard Temporary Event Notice{% endif %}
+          </dd>
+          <dd class="cya-change">
+
+          </dd>
+        </div>
         <div>
           <dt class="cya-question">
             Total cost

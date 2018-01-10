@@ -102,7 +102,7 @@ $(document).ready(function () {
       })
       $('#loader').focus()
       // setTimeout(function () { $('#loader').focus() }, 2 * 1000)
-      setTimeout(function () { loadContent(loader) }, 7 * 1000)
+      setTimeout(function () { loadContent(loader) }, 1 * 1000)
 
       // Copy the postcode and place it into a span on the second step
       var postcode = $('.address-lookup-step1 input').val()
